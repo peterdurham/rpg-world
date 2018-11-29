@@ -1,0 +1,24 @@
+.Navigation {
+    background-color: #1d1d1d;
+    height: 4rem;
+    
+    display: flex;
+    margin-top: 4rem;
+    width: 100rem; 
+    margin-left:auto;
+    margin-right:auto;
+
+    &__item {
+        color: #fff;
+        text-decoration: none;
+        line-height: 4rem;
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin-right: 4rem;
+        text-shadow: 0 1px 2px rgba(3, 3, 3, 0.7); 
+        cursor: pointer;
+  }
+
+}
+
+    

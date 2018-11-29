@@ -1,0 +1,35 @@
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+@import "components/button";
+
+@import "../App.scss";
+
+@import "../components/Header/Header.scss";
+@import "../components/Navigation/Navigation.scss";
+@import "../components/Home/Home.scss";
+@import "../components/News/NewsLink/NewsLink.scss";
+@import "../components/Reviews/Reviews.scss";
+@import "../components/Reviews/Review/Review.scss";
+@import "../components/Details/Details.scss";
+@import "../components/Footer/Footer.scss";
+@import "../components/Platforms/Platforms.scss";
+@import "../components/Preview/Preview.scss";
+@import "../components/Store/Store.scss";
+@import "../components/TopGames/TopGames.scss";
+// @import "../components/";
+// @import "../components/";
+// @import "../components/";
+
+@import "layout/footer";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/navigation";
+
+@import "pages/home";

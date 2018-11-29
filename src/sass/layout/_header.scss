@@ -1,0 +1,35 @@
+.header {
+    background-color:$color-black;
+    
+    &__nav{
+        display:flex;
+        justify-content: space-between;
+        height:4rem;
+        line-height:4rem;
+        margin: 0 5%;
+        
+    }
+    &__banner{
+        height: 8rem;
+        color:$color-white;
+        font-size:6rem;
+        margin: 0 5%;
+        line-height: 6rem;
+    }
+    &__about{
+        display: flex;
+    
+        &--link{
+            color: $color-white;
+            margin-right: 2rem;
+        }
+    }
+    &__social{
+        display: flex;
+
+        &--link{
+            color: $color-white;
+            margin-right: 2rem;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.header {
+    background-color: #030303; 
+
+    &__nav {
+        display: flex;
+        
+        height: 4rem;
+        line-height: 4rem;
+        padding: 0 10%;
+    }
+    &__banner {
+        height: 8rem;
+        color: #fff;
+        font-size: 6rem;
+        margin: 0 5%;
+        line-height: 6rem; 
+        text-align: center;
+    }
+    &__about {
+        display: flex; 
+
+        &--link {
+            color: #fff;
+            margin-right: 2rem; 
+          }
+    }
+        
+    &__social {
+        display: flex; }
+        .header__social--link {
+          color: #fff;
+          margin-right: 2rem; 
+        }
+}
+    
