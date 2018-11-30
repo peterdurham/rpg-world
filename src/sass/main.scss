@@ -1,3 +1,5 @@
+@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
@@ -23,7 +25,10 @@
 @import "../components/Preview/Preview.scss";
 @import "../components/Store/Store.scss";
 @import "../components/TopGames/TopGames.scss";
-// @import "../components/";
+@import "../containers/Carousel/Carousel.scss";
+@import "../components/Store/Offers/Offers.scss";
+@import "../components/Store/Listing/Listing.scss";
+@import "../components/TopPreview/TopPreview.scss";
 // @import "../components/";
 // @import "../components/";
 

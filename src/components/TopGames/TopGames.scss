@@ -3,4 +3,16 @@
     width: 100rem;
     margin-left: auto;
     margin-right: auto;
+
+    &__platforms {
+        display: flex;
+        justify-content: center;
+    }
+    &__platform {
+
+
+        &--image {
+            width:10rem;
+        }
+    }
 }

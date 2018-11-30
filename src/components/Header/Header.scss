@@ -1,13 +1,8 @@
 .header {
     background-color: #030303; 
-
-    &__nav {
-        display: flex;
-        
-        height: 4rem;
-        line-height: 4rem;
-        padding: 0 10%;
-    }
+    width:100%;
+    
+    
     &__banner {
         height: 8rem;
         color: #fff;
@@ -16,20 +11,8 @@
         line-height: 6rem; 
         text-align: center;
     }
-    &__about {
-        display: flex; 
-
-        &--link {
-            color: #fff;
-            margin-right: 2rem; 
-          }
+    &__cart {
+        color: white;
     }
-        
-    &__social {
-        display: flex; }
-        .header__social--link {
-          color: #fff;
-          margin-right: 2rem; 
-        }
 }
     

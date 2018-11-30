@@ -3,21 +3,14 @@ import React from 'react';
 import '../../sass/main.scss';
 
 const Header = (props) => {
+    let cart = (props.shoppingCart.length === 0) ?
+    <div className="header__cart"  onClick={()=>props.loadPage(5)}>Cart</div> :
+    <div className="header__cart"  onClick={()=>props.loadPage(5)}>Cart {props.shoppingCart.length}</div>
+    
     return (
         <div className="header">
-            <div className="header__nav">
-                <div className="header__about">
-                    <div className="header__about--link">About</div>
-                    <div className="header__about--link">Contact</div>
-                </div>
-                <div className="header__social">
-                    <div className="header__social--link">twitter</div>
-                    <div className="header__social--link">instagram</div>
-                    <div className="header__social--link">tumblr</div>
-                    <div className="header__social--link">imgur</div>
-                </div>
-            </div>
             <div className="header__banner">RPG World</div>
+            {cart}
         </div>
     );
 }

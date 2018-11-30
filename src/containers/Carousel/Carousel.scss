@@ -1,0 +1,86 @@
+.Carousel {
+    
+    
+    width: 100rem;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 4rem;
+    text-align: left;
+
+    &__display {
+        display:flex;
+        justify-content: center;
+    }
+    &__slide {
+        display: flex;
+        border:1px solid black;
+    }
+    &__slider--left {
+        border:1px solid black;
+        align-self: center;
+        padding: 4rem 2rem;
+        font-size: 3rem;
+    }
+    &__slider--right {
+        border:1px solid black;
+        align-self: center;
+        padding: 4rem 2rem;
+        font-size: 3rem;
+    }
+    &__img{
+        height:40rem;
+        width: 60rem;
+    }
+    &__contents {
+        margin-left:1rem;
+        width: 30rem;
+    }
+    &__name {
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        margin: 1rem 0;
+    }
+    &__screenshots {
+        display:flex;
+        
+    }
+    &__screenshot {
+        height:8rem;
+        margin-left:2rem;
+        margin-bottom:1rem;
+    }
+    &__text {
+        font-size: 2rem;
+        margin-bottom:2rem;
+    }
+    &__genre {
+        font-size: 2rem;
+        background-color:grey;
+        display:inline-block;
+        margin-bottom: 3rem;
+    }
+    &__bottomline {
+        display:flex;
+        justify-content: space-between;
+    }
+    &__price {
+        font-size: 2rem;
+    }
+    &__platform {
+        font-size: 2rem;
+    }
+    &__nav {
+        display: flex;
+        justify-content: center;
+    }
+    &__box {
+        width: 3rem;
+        height: 1.5rem;
+        margin: 1rem .5rem;
+        border-radius: 3px;
+        background-color: grey;
+    }
+    &__selected {
+        background-color: black;
+    }
+}

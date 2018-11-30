@@ -2,6 +2,7 @@ import React from 'react';
 import '../../sass/main.scss';
 
 import BaldursGateII from '../../img/covers/Baldur\'s_Gate II-_Shadows_of_Amn.png';
+
 import BaldursGate from '../../img/covers/Baldur\'s_Gate.png';
 import Bastion from '../../img/covers/Bastion.png';
 import Bloodborne from '../../img/covers/Bloodborne.png';
@@ -38,9 +39,13 @@ import XenobladeChronicles from '../../img/covers/Xenoblade_Chronicles.png';
 
 
 
+
+
+
 const Preview = (props) => {
-    console.log(props.platforms);
+    
     let img;
+   
     if(props.title === "Mass Effect 2") {
         img = MassEffect2;
     } else if(props.title === "The Elder Scrolls V: Skyrim"){
@@ -105,9 +110,11 @@ const Preview = (props) => {
         img = Morrowind;
     } else if(props.title === "Fable II"){
         img = FableII;
+    } else if(props.title === "Fallout 3"){
+        img = Fallout3;
     }
     return(
-        <div className="Preview">
+        <div className="Preview" onClick={()=>props.viewDetails(props.title)}>
             <img src={img} alt="game" className="Preview__image"/>
             <div className="Preview__content">
                 <div className="Preview__title">{props.title}</div>

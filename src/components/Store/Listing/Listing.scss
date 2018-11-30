@@ -1,0 +1,34 @@
+.Listing {
+    border:1px solid black;
+    width:80rem;
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+    margin-bottom: 1rem;
+
+    &__img {
+        height:14rem;
+        width:12rem;
+        
+    }
+    &__content {
+        width:100%;
+        text-align: left;
+        
+    }
+    &__title {
+        font-size: 2.4rem;
+        padding:1rem 2rem;
+    }
+    &__platforms {
+        padding-left:2rem;
+        
+    }
+    &__genre {
+        padding-left:2rem;
+        
+    }
+    &__price {
+        width:10rem;
+    }
+}

@@ -1,0 +1,52 @@
+.Offers {
+    
+    width: 96rem;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    height:40rem;
+
+    &__left {
+        position: relative;
+        margin-right:2rem;
+    }
+    &__middle {
+        position: relative;
+        margin-right:2rem;
+    }
+    &__right {
+
+        &--top {
+            position: relative;
+            margin-bottom:2.3rem;
+        }
+        &--bottom {
+            position: relative;
+        }
+    }
+
+    &__tallimg {
+        width: 32rem;
+    }
+    &__wideimg {
+        width: 32rem;
+    }
+    &__content {
+        background-color: grey;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 10rem;
+    }
+    &__content--small {
+        background-color: grey;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 5rem;
+    }
+
+}
