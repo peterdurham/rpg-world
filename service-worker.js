@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/rpg-world/precache-manifest.03039eefbe6d1e3a39fcfe39fb1a952d.js"
+  "/rpg-world/precache-manifest.5624d48bbb5751cb368ba6fbb7ebeace.js"
 );
 
 workbox.clientsClaim();
