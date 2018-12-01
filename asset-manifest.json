@@ -1,7 +1,7 @@
 {
-  "main.css": "/rpg-world/static/css/main.ccb5e507.chunk.css",
-  "main.js": "/rpg-world/static/js/main.d3246dda.chunk.js",
-  "main.js.map": "/rpg-world/static/js/main.d3246dda.chunk.js.map",
+  "main.css": "/rpg-world/static/css/main.66a6aeb5.chunk.css",
+  "main.js": "/rpg-world/static/js/main.d8da24ac.chunk.js",
+  "main.js.map": "/rpg-world/static/js/main.d8da24ac.chunk.js.map",
   "static/js/1.28b3ddeb.chunk.js": "/rpg-world/static/js/1.28b3ddeb.chunk.js",
   "static/js/1.28b3ddeb.chunk.js.map": "/rpg-world/static/js/1.28b3ddeb.chunk.js.map",
   "runtime~main.js": "/rpg-world/static/js/runtime~main.4060ff8f.js",
@@ -19,7 +19,6 @@
   "static/media/Bastion.png": "/rpg-world/static/media/Bastion.95e270e4.png",
   "static/media/Chrono_Cross.png": "/rpg-world/static/media/Chrono_Cross.6f3f5e5f.png",
   "static/media/Monster_Hunter_World.png": "/rpg-world/static/media/Monster_Hunter_World.f822bcd0.png",
-  "static/media/Final_Fantasy_IX.jpg": "/rpg-world/static/media/Final_Fantasy_IX.f49a2a46.jpg",
   "static/media/Baldur's_Gate II-_Shadows_of_Amn.png": "/rpg-world/static/media/Baldur's_Gate II-_Shadows_of_Amn.474b88e3.png",
   "static/media/Bloodborne.png": "/rpg-world/static/media/Bloodborne.8601d13f.png",
   "static/media/Castlevania_Symphony_of_the_Night.png": "/rpg-world/static/media/Castlevania_Symphony_of_the_Night.80ea1972.png",
@@ -39,6 +38,7 @@
   "static/media/The_Elder_Scrolls_V-_Skyrim.png": "/rpg-world/static/media/The_Elder_Scrolls_V-_Skyrim.b7261602.png",
   "static/media/The_Witcher_3-_Wild_Hunt.png": "/rpg-world/static/media/The_Witcher_3-_Wild_Hunt.2af19c10.png",
   "static/media/World_of_Warcraft.png": "/rpg-world/static/media/World_of_Warcraft.bce73196.png",
+  "static/media/Final_Fantasy_IX.jpg": "/rpg-world/static/media/Final_Fantasy_IX.f49a2a46.jpg",
   "static/media/Castlevania-_Symphony_of_the_Night.jpg": "/rpg-world/static/media/Castlevania-_Symphony_of_the_Night.5c3db3d8.jpg",
   "static/media/Dark_Souls_III.jpg": "/rpg-world/static/media/Dark_Souls_III.ecea9355.jpg",
   "static/media/Fable_2.jpg": "/rpg-world/static/media/Fable_2.640c6598.jpg",
@@ -106,8 +106,8 @@
   "static/media/The_Witcher_3-_Wild_Hunt.jpg": "/rpg-world/static/media/The_Witcher_3-_Wild_Hunt.a1c929ca.jpg",
   "static/media/Vagrant_Story.jpg": "/rpg-world/static/media/Vagrant_Story.2253b7c1.jpg",
   "static/media/World_of_Warcraft.jpg": "/rpg-world/static/media/World_of_Warcraft.b70a4804.jpg",
-  "static/css/main.ccb5e507.chunk.css.map": "/rpg-world/static/css/main.ccb5e507.chunk.css.map",
+  "static/css/main.66a6aeb5.chunk.css.map": "/rpg-world/static/css/main.66a6aeb5.chunk.css.map",
   "index.html": "/rpg-world/index.html",
-  "precache-manifest.5624d48bbb5751cb368ba6fbb7ebeace.js": "/rpg-world/precache-manifest.5624d48bbb5751cb368ba6fbb7ebeace.js",
+  "precache-manifest.d11fcf15e101336c3b228b582b65aee9.js": "/rpg-world/precache-manifest.d11fcf15e101336c3b228b582b65aee9.js",
   "service-worker.js": "/rpg-world/service-worker.js"
 }

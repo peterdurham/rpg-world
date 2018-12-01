@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/rpg-world/static/media/article5.9e82f3a6.jpg"
   },
   {
-    "revision": "d3246dda08d257ea4e88",
-    "url": "/rpg-world/static/css/main.ccb5e507.chunk.css"
+    "revision": "d8da24ac61ded6c53db9",
+    "url": "/rpg-world/static/css/main.66a6aeb5.chunk.css"
   },
   {
     "revision": "28b3ddebc9fb24d4b518",
@@ -66,10 +66,6 @@ self.__precacheManifest = [
   {
     "revision": "f822bcd0760f50fd28b9d67b1f96a7e5",
     "url": "/rpg-world/static/media/Monster_Hunter_World.f822bcd0.png"
-  },
-  {
-    "revision": "f49a2a467d9b32db1b3f9b962c3b1b45",
-    "url": "/rpg-world/static/media/Final_Fantasy_IX.f49a2a46.jpg"
   },
   {
     "revision": "474b88e34935345fa2ccfc3c976985a7",
@@ -148,6 +144,10 @@ self.__precacheManifest = [
     "url": "/rpg-world/static/media/World_of_Warcraft.bce73196.png"
   },
   {
+    "revision": "f49a2a467d9b32db1b3f9b962c3b1b45",
+    "url": "/rpg-world/static/media/Final_Fantasy_IX.f49a2a46.jpg"
+  },
+  {
     "revision": "5c3db3d882580662cccac178799cc859",
     "url": "/rpg-world/static/media/Castlevania-_Symphony_of_the_Night.5c3db3d8.jpg"
   },
@@ -208,8 +208,8 @@ self.__precacheManifest = [
     "url": "/rpg-world/static/media/article3.d12fa1fe.jpg"
   },
   {
-    "revision": "d3246dda08d257ea4e88",
-    "url": "/rpg-world/static/js/main.d3246dda.chunk.js"
+    "revision": "d8da24ac61ded6c53db9",
+    "url": "/rpg-world/static/js/main.d8da24ac.chunk.js"
   },
   {
     "revision": "9ba4f3c4f7217506c0e87b0a30c93738",
@@ -416,7 +416,7 @@ self.__precacheManifest = [
     "url": "/rpg-world/static/media/World_of_Warcraft.b70a4804.jpg"
   },
   {
-    "revision": "5523ecb6ef437bcf85f2e7edc76500ff",
+    "revision": "cd2b2662044339c46e2db1db24451239",
     "url": "/rpg-world/index.html"
   }
 ];
