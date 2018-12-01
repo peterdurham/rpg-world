@@ -1,8 +1,13 @@
 .NewsLink {
     display: flex;
-    border-bottom: 1px solid rgb(200,200,200);
+    
     background-color: white;
     text-align: left;
+    margin-left:1rem;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid rgb(200,200,200);
+    }
 
     &__image {
         width: 15rem;
@@ -35,5 +40,10 @@
     &__logo {
         width: 10rem;
         margin-left:1rem;
+        margin-top:1rem;
+        margin-right: 1rem;
     }
+
+    
 }
+

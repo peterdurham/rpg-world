@@ -7,20 +7,20 @@ import Listing from '../../components/Store/Listing/Listing';
 const Store = (props) => {
     
     return(
-        <div>
-            Store
-            Featured
+        <div className="Store">
+            
+            <div className="Store__label">Featured</div>
             <Carousel 
                 games={props.games}
                 viewDetails = {props.viewDetails}
             />
 
-            Special Offers
+            <div className="Store__label">Special Offers</div>
             <Offers 
                 games={props.games}
                 viewDetails = {props.viewDetails}
                 />
-            All RPGs
+            <div className="Store__label Store__label--rpg">All RPGs</div>
             {props.games.map((game)=><Listing
                 key = {game.title}
                 title = {game.title}

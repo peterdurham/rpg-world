@@ -7,8 +7,8 @@ import BaldursGate from '../../img/covers/Baldur\'s_Gate.png';
 import BaldursGateFull from '../../img/fullsize/Baldurs_Gate.jpg';
 import Bastion from '../../img/covers/Bastion.png';
 import BastionFull from '../../img/covers/Bastion.png';
-import Bloodborne from '../../img/covers/Bloodborne.png';
-import BloodborneFull from '../../img/fullsize/Bloodborne.jpg';
+import BloodBorne from '../../img/covers/Bloodborne.png';
+import BloodBorneFull from '../../img/fullsize/Bloodborne.jpg';
 import CastlevaniaSymphony from '../../img/covers/Castlevania_Symphony_of_the_Night.png';
 import CastlevaniaSymphonyFull from '../../img/fullsize/Castlevania-_Symphony_of_the_Night.jpg';
 import ChronoCross from '../../img/covers/Chrono_Cross.png';
@@ -117,8 +117,8 @@ const Details = (props) => {
         img = WorldofWarcraft;
         full = WorldofWarcraftFull;
     } else if(selected[0].title === "BloodBorne"){
-        img = Bloodborne;
-        full = BloodborneFull;
+        img = BloodBorne;
+        full = BloodBorneFull;
     } else if(selected[0].title === "Vagrant Story"){
         img = VagrantStory;
         full = VagrantStoryFull;
@@ -176,25 +176,28 @@ const Details = (props) => {
     }
     
     let cartButton = (props.shoppingCart.indexOf(selected[0].title)> -1) ?
-    <div className="Details__addToCart--view" >View Cart</div> :
+    <div className="Details__addToCart--view" onClick={()=>props.loadPage(5)}>View Cart</div> :
     <div className="Details__addToCart--add" onClick={()=>props.addToCart(selected[0].title)}>Add to Cart</div>
 
     return(
         <div className="Details">
-            <div className="Details__title">{selected[0].title} {selected[0].platforms}</div>
-           
-            <div className="Details__info">{selected[0].developer} | {selected[0].genre} | {selected[0].release}</div>
-            <div className="Details__content">
-                <img src={img} alt="cover" className="Details__coverimg"/>
-                <div className="Details__score">Score: {selected[0].score}</div>
-                <div className="Details__addToCart">
-                    <div className="Details__price">{selected[0].price}</div>
-                    {cartButton}
-                </div>
+            <div className="Details__container">
+                <div className="Details__title">{selected[0].title}</div>
+                <div className="Details__platforms">{selected[0].platforms.map(platform=>` ${platform}`)}</div>
+                <div className="Details__info">{selected[0].developer} | {selected[0].genre} | {selected[0].release}</div>
+                <div className="Details__content">
+                    <img src={img} alt="cover" className="Details__coverimg"/>
+                    <div className="Details__score">Score: {selected[0].score}</div>
+                    <div className="Details__addToCart">
+                        <div className="Details__price">${selected[0].price}</div>
+                        {cartButton}
+                        </div>
+                    </div>
+                    <div className="Details__summary--label">Summary:</div>
+                    <div className="Details__summary">{selected[0].summary}</div>
+                    <img className="Details__fullsize" src={full} alt="fullsize" />
             </div>
-            <div className="Details__summary--label">Summary:</div>
-            <div className="Details__summary">{selected[0].summary}</div>
-            <img className="Details__fullsize" src={full} alt="fullsize" />
+            
         </div>
     );
 }

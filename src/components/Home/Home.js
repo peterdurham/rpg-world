@@ -17,13 +17,32 @@ const Home = (props) => {
         <div>
             <div className="Gallery">
                 <div className="Gallery__toprow">
-                    <img onClick={()=>props.viewDetails("Castlevania: Symphony of the Night")} src={Castlevania} alt="Castlevania" className="Gallery__top"/>
-                    <img onClick={()=>props.viewDetails("Dark Souls III")} src={DarkSoulsIII} alt="Dark Souls III" className="Gallery__top"/>
+                    <div className="Gallery__topleft" onClick={()=>props.viewDetails("Castlevania: Symphony of the Night")}>
+                        <img src={Castlevania} alt="Castlevania" className="Gallery__top"/>     
+                        <div className="Gallery__label">Castlevania: Symphony of the Night</div>
+                    </div>
+                    
+                    <div className="Gallery__topright" onClick={()=>props.viewDetails("Dark Souls III")}>
+                        <img src={DarkSoulsIII} alt="Dark Souls III" className="Gallery__top"/>
+                        <div className="Gallery__label">Dark Souls III</div>
+                    </div>
+                    
+                    
                 </div>
                 <div className="Gallery__bottomrow">
-                    <img onClick={()=>props.viewDetails("Fable II")} src={FableII} alt="Fable II" className="Gallery__bottom"/>
-                    <img onClick={()=>props.viewDetails("Monster Hunter: World")} src={MonsterHunter} alt="Monster Hunter"  className="Gallery__bottom"/>
-                    <img onClick={()=>props.viewDetails("Divinity: Original Sin II")} src={DivinityII} alt="Divinity II" className="Gallery__bottom"/>
+                    <div className="Gallery__bottomleft" onClick={()=>props.viewDetails("Fable II")}>
+                        <img src={FableII} alt="Fable II" className="Gallery__bottom"/>
+                        <div className="Gallery__label--small">Fable II</div>
+                    </div>
+                    <div className="Gallery__bottommiddle" onClick={()=>props.viewDetails("Monster Hunter: World")}>
+                        <img src={MonsterHunter} alt="Monster Hunter"  className="Gallery__bottom"/>
+                        <div className="Gallery__label--small">Monster Hunter: World</div>
+                    </div>
+                    <div className="Gallery__bottomright" onClick={()=>props.viewDetails("Divinity: Original Sin II")}>
+                        <img src={DivinityII} alt="Divinity II" className="Gallery__bottom"/>
+                        <div className="Gallery__label--small">Divinity: Original Sin II</div>
+                    </div>
+                    
                 </div>
             </div>
 

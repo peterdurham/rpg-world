@@ -3,8 +3,8 @@ import '../../sass/main.scss';
 
 const Footer = (props) => {
     return(
-        <div>
-            Footer
+        <div className="Footer">
+            RPG World 2018 Peter Durham
         </div>
     );
 }

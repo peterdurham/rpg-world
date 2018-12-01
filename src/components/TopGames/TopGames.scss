@@ -3,7 +3,24 @@
     width: 100rem;
     margin-left: auto;
     margin-right: auto;
+    
 
+    &__header {
+        font-size: 3rem;
+        border-bottom: 3px solid $color-black;
+        text-align: center;
+        margin-left:1rem;
+        margin-right:1rem;
+        display:flex;
+        justify-content: center;
+        
+        padding:2rem 0;
+        margin-bottom:2rem;
+    }
+    &__title {
+        margin-right:1rem;
+        font-weight: 700;
+    }
     &__platforms {
         display: flex;
         justify-content: center;
@@ -12,7 +29,23 @@
 
 
         &--image {
-            width:10rem;
+            height:4rem;
+            
+        }
+    }
+    &__labels {
+        display:flex;
+        
+        font-size: 2.4rem;
+        font-weight: 600;
+    }
+    &__label {
+
+        &--title {
+            flex-basis:50%;
+         }
+        &--user {
+           flex-basis:50%;
         }
     }
 }

@@ -62,7 +62,7 @@ class Carousel extends Component {
         </div> : null
 
     let slide2 = (this.state.carouselSlide===2) ?
-        <div className="Carousel__slide" onClick={()=>this.props.viewDetails("Bloodborne")}>
+        <div className="Carousel__slide" onClick={()=>this.props.viewDetails("BloodBorne")}>
                     <img src={Bloodborne} alt="bg" className="Carousel__img"/>
                     <div className="Carousel__contents">
                         <div className="Carousel__name">Bloodborne</div>

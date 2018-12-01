@@ -18,7 +18,7 @@ const TopGames = (props) => {
 
     if(props.currentSort[0] === true){
         display = sorted;
-        icon = <div>ALL</div>
+        icon = <div>All Platforms</div>
     } else if(props.currentSort[1]=== true){
         display = sorted.filter((game)=>game.platforms.indexOf("PC") > -1);
         icon = <div><img src={PC} alt="PC" className="TopGames__platform--image"/></div>
@@ -51,10 +51,13 @@ const TopGames = (props) => {
 
     return(
         <div className="TopGames">
-            Top Games
-            <div className="TopGames__platforms">
-            {icon}
-            
+            <div className="TopGames__header">
+                <div className="TopGames__title">Top Games</div>
+                {icon}
+            </div>
+            <div className="TopGames__labels">
+                <div className="TopGames__label--title">Title</div>
+                <div className="TopGames__label--user">User Rating</div>
             </div>
             {display.map((game,index)=><Preview 
                 key={index}

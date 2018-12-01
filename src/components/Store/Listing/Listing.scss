@@ -4,12 +4,15 @@
     margin-left:auto;
     margin-right:auto;
     display: flex;
-    margin-bottom: 1rem;
-
+    margin-bottom: 2rem;
+    background: linear-gradient(to right, $color-blue-1, $color-blue-2);
+    box-shadow: 0 .4rem .8rem rgba(140,140,140,.6);
+    color: $color-grey;
+    cursor: pointer;
     &__img {
-        height:14rem;
-        width:12rem;
-        
+        width:14rem;
+        height:16rem;
+        padding: 1rem 2rem;
     }
     &__content {
         width:100%;
@@ -17,18 +20,22 @@
         
     }
     &__title {
-        font-size: 2.4rem;
-        padding:1rem 2rem;
+        font-size: 3rem;
+        padding:1rem 1rem;
     }
     &__platforms {
-        padding-left:2rem;
-        
+        padding-left:1rem;
+        font-size: 2rem;
     }
     &__genre {
-        padding-left:2rem;
-        
+        padding-left:1rem;
+        font-size: 2rem;
     }
     &__price {
         width:10rem;
+        font-size: 2.4rem;
+        font-weight: 500;
+        padding:1rem;
+        padding-right:2rem;
     }
 }

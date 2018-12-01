@@ -5,7 +5,7 @@ import Header from './components/Header/Header';
 import Navigation from './components/Navigation/Navigation';
 import Home from './components/Home/Home';
 import Reviews from './components/Reviews/Reviews';
-
+import Footer from './components/Footer/Footer';
 import TopGames from './components/TopGames/TopGames';
 import Store from './components/Store/Store';
 import Details from './components/Details/Details';
@@ -23,7 +23,7 @@ class App extends Component {
     news: [],
     reviews: [],
     top10: [],
-    display: [false, false, false, true, false, false],
+    display: [true, false, false, false, false, false],
     //Sorts: All, PC, Playstation 1-4, Xbox 360/One, Nintendo Switch
     currentSort: [true, false, false, false, false, false, false, false, false],
     selectedGame: null,
@@ -88,6 +88,7 @@ class App extends Component {
     <Store 
       games = {this.state.games}
       viewDetails = {this.viewDetailsHandler}
+      
     /> : null
     let details = (this.state.display[4] === true) ?
     <Details 
@@ -95,6 +96,7 @@ class App extends Component {
       selectedGame={this.state.selectedGame}
       addToCart = {this.addToCartHandler}
       shoppingCart = {this.state.shoppingCart}
+      loadPage = {this.loadPageHandler}
     /> : null
     let cart = (this.state.display[5] === true) ?
     <Cart 
@@ -102,24 +104,28 @@ class App extends Component {
       addToCart = {this.addToCartHandler}
       shoppingCart = {this.state.shoppingCart}
       removeFromCart = {this.removeFromCartHandler}
+      loadPage = {this.loadPageHandler} 
     /> : null
 
     return (
       <div className="App">
         <Header 
           loadPage = {this.loadPageHandler}
-          shoppingCart={this.state.shoppingCart}/>
+          />
         <Navigation 
           loadPage = {this.loadPageHandler} 
           currentSort = {this.state.currentSort}
-          selectPlatformSort = {this.selectPlatformSortHandler} />
-        
+          selectPlatformSort = {this.selectPlatformSortHandler} 
+          shoppingCart={this.state.shoppingCart}
+          display = {this.state.display}
+          />
         {home}
         {reviews}
         {topgames}
         {store}
         {details}
         {cart}
+        <Footer />
       </div>
     );
   }

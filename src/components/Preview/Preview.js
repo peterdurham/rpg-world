@@ -113,15 +113,21 @@ const Preview = (props) => {
     } else if(props.title === "Fallout 3"){
         img = Fallout3;
     }
+
+    let score = (props.score >=8.5) ?
+    <div className="Preview__score Preview__score--green">{props.score}</div> :
+    <div className="Preview__score Preview__score--yellow">{props.score}</div>
+
     return(
         <div className="Preview" onClick={()=>props.viewDetails(props.title)}>
             <img src={img} alt="game" className="Preview__image"/>
             <div className="Preview__content">
                 <div className="Preview__title">{props.title}</div>
-                <div className="Preview__platforms">{props.platforms.map(platform=>` ${platform}`)}</div>
-                <div className="Preview__release">{props.release}</div>
+                <div className="Preview__developer"><span className="Preview__bold">Developer:</span> {props.developer}, {props.release}</div>
+                <div className="Preview__platforms"><span className="Preview__bold">Platforms:</span> {props.platforms.map(platform=>` ${platform}`)}</div>
+                <div className="Preview__genre"><span className="Preview__bold">Genre:</span> {props.genre}</div>
             </div>
-            <div className="Preview__score">{props.score}</div>
+                {score}
         </div>
     );
 }

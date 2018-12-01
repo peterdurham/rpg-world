@@ -1,17 +1,27 @@
 .Details {
     text-align: left;
-    width:80rem;
+    width:100rem;
     margin-left:auto;
     margin-right:auto;
-
-
+    background-color: white;    
+    &__container {
+        width:80rem;
+        margin-left:auto;
+        margin-right:auto;
+    }
     &__title {
-        font-size: 3rem;
-        margin-top:2rem;    
+        font-size: 4rem;
+        padding-top:2rem;    
         font-weight: 500;
+    }
+    &__platforms {
+        margin-left:2rem;
+        font-size: 2rem;
     }
     &__info {
         font-size: 2rem;
+        margin-bottom:2rem;
+        margin-left:2rem;
     }
     &__content {
         display:flex;
@@ -24,27 +34,41 @@
     }
     &__score {
         font-size: 2rem;
+        width:15rem;
+        text-align: center;
         background-color: black;
         color: white;
         padding: 1rem;
         height:5.5rem;
         margin-left:4rem;
-        margin-right:30rem;
+        margin-right:25rem;
     }
     &__price {
-        border:1px solid green;
-        height:5rem;
+        background-color:$color-black;
+        color:$color-grey;
+        height:4rem;
+        padding:.5rem 1rem;
+        cursor: pointer;
     }
     &__addToCart {
         display:flex;
         
         &--view {
-            height:5rem;
-            border:1px solid red;
+            height:4rem;
+            color:white;
+            padding:.5rem 1rem;
+            width:11.5rem;
+            background: linear-gradient(to right, $color-blue-1, $color-blue-2);
+            text-align: center;
+            cursor: pointer;
         }
         &--add {
-            height:5rem;
-            border:1px solid red;
+            height:4rem;
+            color:white;
+            padding:.5rem 1rem;
+            width:11.5rem;
+            background: linear-gradient(to bottom, $color-score-green, $color-score-green-dark);
+            cursor: pointer;
         }
     }
     &__summary {
@@ -58,5 +82,6 @@
     }
     &__fullsize {
         width: 80rem;
+        margin-bottom: 4rem;
     }
 }

@@ -1,14 +1,15 @@
 .header {
     background-color: #030303; 
     width:100%;
-    
+    height:10rem;
     
     &__banner {
-        height: 8rem;
+        padding-top:2rem;
         color: #fff;
-        font-size: 6rem;
+        font-size: 5rem;
         margin: 0 5%;
-        line-height: 6rem; 
+        text-shadow: .4rem .4rem rgba($color-grey, .1);
+        
         text-align: center;
     }
     &__cart {

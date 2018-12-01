@@ -13,19 +13,24 @@ const Cart = (props) => {
     
     let cart = (props.shoppingCart.length > 0) ?
     <div>
-            Cart
+            
             {props.shoppingCart.map((item)=><CartItem 
                 key={item}
                 title={item}
                 game={props.games.filter((game)=>game.title === item)}
                 removeFromCart = {props.removeFromCart}
             />)}
-            <div>Total Price: {totalPrice}</div>
-    </div> : <div>Your Cart is empty</div>
+            <div className="Cart__totalprice">Total Price: ${totalPrice.toFixed(2)}</div>
+    </div> : <div>
+            <div className="Cart__message">Your Cart is empty</div>
+            <div className="Cart__message">Visit the store to add games</div>
+                <button className="Cart__button" onClick={()=>props.loadPage(3)}>Store</button>
+            </div>
 
 
     return(
-        <div>
+        <div className="Cart">
+            <div className="Cart__title">Shopping Cart</div>
             {cart}
         </div>
     );

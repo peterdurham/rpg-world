@@ -4,60 +4,82 @@
     width: 100rem;
     margin-left:auto;
     margin-right:auto;
-    margin-top: 4rem;
+    margin-top: 1rem;
     text-align: left;
-
+    color: $color-grey;
     &__display {
         display:flex;
         justify-content: center;
     }
     &__slide {
         display: flex;
-        border:1px solid black;
+        box-shadow: 0 .4rem .8rem rgba(140,140,140,.6);
+        background: linear-gradient(to left, $color-blue-1, $color-blue-2);
+        cursor: pointer;
     }
     &__slider--left {
         border:1px solid black;
         align-self: center;
         padding: 4rem 2rem;
         font-size: 3rem;
+        background: linear-gradient(to left, $color-blue-1, $color-blue-2);
+        cursor: pointer;
+    }
+    &__slider--left:active{
+        transform: translateY(2px);
     }
     &__slider--right {
         border:1px solid black;
         align-self: center;
         padding: 4rem 2rem;
         font-size: 3rem;
+        background: linear-gradient(to right, $color-blue-1, $color-blue-2);
+        cursor: pointer;
+    }
+    &__slider--right:active{
+        transform: translateY(2px);
     }
     &__img{
         height:40rem;
-        width: 60rem;
+        width: 56rem;
     }
     &__contents {
         margin-left:1rem;
         width: 30rem;
+        
     }
     &__name {
         font-size: 2.4rem;
-        text-transform: uppercase;
-        margin: 1rem 0;
+        font-weight: 600;
+        padding-top:1rem;
+        padding-left: 1rem;
+        
     }
     &__screenshots {
         display:flex;
-        
+        flex-direction: column;
+        width:15rem;
     }
     &__screenshot {
         height:8rem;
-        margin-left:2rem;
+        
         margin-bottom:1rem;
+        margin-left: 3rem;
     }
     &__text {
         font-size: 2rem;
         margin-bottom:2rem;
+        margin-left:1rem;
     }
     &__genre {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        border-radius: 2px;
         background-color:grey;
         display:inline-block;
         margin-bottom: 3rem;
+        margin-left:1rem;
+        color: $color-black;
+        padding:.5rem;
     }
     &__bottomline {
         display:flex;
@@ -65,9 +87,12 @@
     }
     &__price {
         font-size: 2rem;
+        margin-left:1rem;
+        font-weight: 500;
     }
     &__platform {
         font-size: 2rem;
+        margin-right:2rem;
     }
     &__nav {
         display: flex;

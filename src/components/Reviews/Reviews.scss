@@ -3,7 +3,7 @@
     width: 100rem;
     margin-left: auto;
     margin-right: auto;
-    
+    background-color:white;
     &__content {
         flex-basis: 70%;
         margin-right:2rem;
@@ -12,6 +12,7 @@
         font-size: 3rem;
         border-bottom: 3px solid $color-black;
         text-align: left;
+        margin-left:1rem;
     }
 
     &__topgames {
