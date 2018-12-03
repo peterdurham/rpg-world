@@ -2,6 +2,8 @@
     background-color: white;
     
     display:inline-block;
+    width:100rem;
+    
     padding-top:1rem;
     cursor: pointer;
     &__toprow {
@@ -29,7 +31,7 @@
     &__bottom {
         width: 32.66667rem;
         &:not(:last-child) {
-            margin-right: 1rem;;
+            margin-right: 1rem;
         }
     }
     &__bottomleft {
