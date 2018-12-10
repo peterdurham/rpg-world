@@ -11,10 +11,10 @@ import Store from './components/Store/Store';
 import Details from './components/Details/Details';
 import Cart from './components/Cart/Cart';
 
-var games = require('./games');
-var news = require('./news');
-var reviews = require('./reviews');
-var top10 = require('./top10');
+const games = require('./games');
+const news = require('./news');
+const reviews = require('./reviews');
+const top10 = require('./top10');
 
 
 class App extends Component {
@@ -24,41 +24,44 @@ class App extends Component {
     reviews: [],
     top10: [],
     display: [true, false, false, false, false, false],
-    //Sorts: All, PC, Playstation 1-4, Xbox 360/One, Nintendo Switch
+    // Sorts: All, PC, Playstation 1-4, Xbox 360/One, Nintendo Switch
     currentSort: [true, false, false, false, false, false, false, false, false],
     selectedGame: null,
-    shoppingCart: []
+    shoppingCart: [],
   }
-  
+
   componentDidMount = () => {
-    this.setState(()=>({ news , games , reviews, top10}))
+    this.setState(() => ({
+      news, games, reviews, top10,
+    }));
   }
 
   loadPageHandler = (indexToShow) => {
     let display = [...this.state.display];
     display = display.map(item => false);
     display[indexToShow] = true;
-    this.setState(() => ({display}))
+    this.setState(() => ({ display }));
   }
+
   selectPlatformSortHandler = (platformSort) => {
-      this.setState(()=>({currentSort:platformSort, display: [false, false, true, false]}));
+    this.setState(() => ({ currentSort: platformSort, display: [false, false, true, false] }));
   }
   
   viewDetailsHandler = (titleToView) => {
-    this.setState(()=>({selectedGame: titleToView, display: [false,false,false,false,true]}))
+    this.setState(() => ({ selectedGame: titleToView, display: [false, false, false, false, true] }));
   }
+
   addToCartHandler = (titleToAdd) => {
     let cart = [...this.state.shoppingCart];
-
-    cart =cart.concat(titleToAdd);
-    
-    this.setState(()=>({shoppingCart: cart}))
+    cart = cart.concat(titleToAdd);
+    this.setState(() => ({ shoppingCart: cart }));
   }
+
   removeFromCartHandler = (titleToRemove) => {
     let cart = [...this.state.shoppingCart];
     let index = cart.indexOf(titleToRemove);
-    cart.splice(index,1);
-    this.setState(()=>({shoppingCart: cart}));
+    cart.splice(index, 1);
+    this.setState(() => ({ shoppingCart: cart }));
   }
 
 
@@ -110,14 +113,14 @@ class App extends Component {
     return (
       <div className="App">
         <Header 
-          loadPage = {this.loadPageHandler}
+          loadPage= {this.loadPageHandler}
           />
         <Navigation 
-          loadPage = {this.loadPageHandler} 
-          currentSort = {this.state.currentSort}
-          selectPlatformSort = {this.selectPlatformSortHandler} 
-          shoppingCart={this.state.shoppingCart}
-          display = {this.state.display}
+          loadPage= {this.loadPageHandler}
+          currentSort= {this.state.currentSort}
+          selectPlatformSort= {this.selectPlatformSortHandler}
+          shoppingCart= {this.state.shoppingCart}
+          display= {this.state.display}
           />
         {home}
         {reviews}
