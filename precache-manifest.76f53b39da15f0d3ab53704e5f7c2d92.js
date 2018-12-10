@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/rpg-world/static/media/article5.9e82f3a6.jpg"
   },
   {
-    "revision": "ec2180e1c0de7c1a8730",
-    "url": "/rpg-world/static/css/main.ba325178.chunk.css"
+    "revision": "2606608e8bd5cc0bec6e",
+    "url": "/rpg-world/static/css/main.61af074d.chunk.css"
   },
   {
-    "revision": "28b3ddebc9fb24d4b518",
-    "url": "/rpg-world/static/js/1.28b3ddeb.chunk.js"
+    "revision": "78d4e74cff2016456308",
+    "url": "/rpg-world/static/js/1.78d4e74c.chunk.js"
   },
   {
     "revision": "4060ff8f27fcd85fe774",
@@ -208,8 +208,8 @@ self.__precacheManifest = [
     "url": "/rpg-world/static/media/article3.d12fa1fe.jpg"
   },
   {
-    "revision": "ec2180e1c0de7c1a8730",
-    "url": "/rpg-world/static/js/main.ec2180e1.chunk.js"
+    "revision": "2606608e8bd5cc0bec6e",
+    "url": "/rpg-world/static/js/main.2606608e.chunk.js"
   },
   {
     "revision": "9ba4f3c4f7217506c0e87b0a30c93738",
@@ -416,7 +416,7 @@ self.__precacheManifest = [
     "url": "/rpg-world/static/media/World_of_Warcraft.b70a4804.jpg"
   },
   {
-    "revision": "87c90fe33eefc2c28e3cfbde128b9e78",
+    "revision": "ac03a510504eafde466e5ad8f2aac2ab",
     "url": "/rpg-world/index.html"
   }
 ];
