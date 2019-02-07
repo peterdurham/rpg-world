@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, Route } from "react-router-dom";
 import PropTypes from "prop-types";
 import "../../sass/main.scss";
 
@@ -10,251 +11,122 @@ const Navigation = ({
 }) => {
   let cart =
     shoppingCart.length === 0 ? (
-      <div
+      <Link
+        to="/cart"
         className={
           display[5] === true
             ? "Navigation__item Navigation__item--active"
             : "Navigation__item"
         }
-        onClick={() => loadPage(5)}
       >
         Cart
-      </div>
+      </Link>
     ) : (
-      <div
+      <Link
+        to="/cart"
         className={
           display[5] === true
             ? "Navigation__item Navigation__item--active"
             : "Navigation__item"
         }
-        onClick={() => loadPage(5)}
       >
         Cart {shoppingCart.length}
-      </div>
+      </Link>
     );
 
   return (
     <div className="Navigation">
-      <div
+      <Link
+        to="/"
         className={
           display[0] === true
             ? "Navigation__item Navigation__item--active"
             : "Navigation__item"
         }
-        onClick={() => loadPage(0)}
       >
         RPG World
-      </div>
-      <div
+      </Link>
+      <Link
+        to="/reviews"
         className={
           display[1] === true
             ? "Navigation__item Navigation__item--active"
             : "Navigation__item"
         }
-        onClick={() => loadPage(1)}
       >
         Reviews
-      </div>
+      </Link>
 
       <div className="dropdown">
-        <button
+        <Link
+          to="/topgames/all"
           className={
             display[2] === true
               ? "Navigation__item dropbtn Navigation__item--active"
               : "Navigation__item dropbtn"
           }
-          onClick={() =>
-            selectPlatformSort([
-              true,
-              false,
-              false,
-              false,
-              false,
-              false,
-              false,
-              false,
-              false
-            ])
-          }
         >
           Top Games<span className="Navigation__icon">&#9660;</span>
-        </button>
+        </Link>
         <div className="dropdown-content">
-          <div
-            className="dropdown-selection"
-            onClick={() =>
-              selectPlatformSort([
-                true,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ])
-            }
-          >
-            All Platforms
+          <div onClick={() => selectPlatformSort("all")}>
+            <Link to="/topgames/all" className="dropdown-selection">
+              All Platforms
+            </Link>
           </div>
-          <div
-            className="dropdown-selection"
-            onClick={() =>
-              selectPlatformSort([
-                false,
-                true,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ])
-            }
-          >
-            PC
+          <div onClick={() => selectPlatformSort("pc")}>
+            <Link to="/topgames/pc" className="dropdown-selection">
+              PC
+            </Link>
           </div>
-          <div
-            className="dropdown-selection"
-            onClick={() =>
-              selectPlatformSort([
-                false,
-                false,
-                true,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-              ])
-            }
-          >
-            PlayStation
+          <div onClick={() => selectPlatformSort("playstation")}>
+            <Link to="/topgames/playstation" className="dropdown-selection">
+              PlayStation
+            </Link>
           </div>
-          <div
-            className="dropdown-selection"
-            onClick={() =>
-              selectPlatformSort([
-                false,
-                false,
-                false,
-                true,
-                false,
-                false,
-                false,
-                false,
-                false
-              ])
-            }
-          >
-            PlayStation 2
+          <div onClick={() => selectPlatformSort("playstation2")}>
+            <Link to="/topgames/playstation2" className="dropdown-selection">
+              PlayStation 2
+            </Link>
           </div>
-          <div
-            className="dropdown-selection"
-            onClick={() =>
-              selectPlatformSort([
-                false,
-                false,
-                false,
-                false,
-                true,
-                false,
-                false,
-                false,
-                false
-              ])
-            }
-          >
-            PlayStation 3
+          <div onClick={() => selectPlatformSort("playstation3")}>
+            <Link to="/topgames/playstation3" className="dropdown-selection">
+              PlayStation 3
+            </Link>
           </div>
-          <div
-            className="dropdown-selection"
-            onClick={() =>
-              selectPlatformSort([
-                false,
-                false,
-                false,
-                false,
-                false,
-                true,
-                false,
-                false,
-                false
-              ])
-            }
-          >
-            PlayStation 4
+          <div onClick={() => selectPlatformSort("playstation4")}>
+            <Link to="/topgames/playstation4" className="dropdown-selection">
+              PlayStation 4
+            </Link>
           </div>
-          <div
-            className="dropdown-selection"
-            onClick={() =>
-              selectPlatformSort([
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                true,
-                false,
-                false
-              ])
-            }
-          >
-            Xbox 360
+          <div onClick={() => selectPlatformSort("xbox360")}>
+            <Link to="/topgames/xbox360" className="dropdown-selection">
+              Xbox 360
+            </Link>
           </div>
-          <div
-            className="dropdown-selection"
-            onClick={() =>
-              selectPlatformSort([
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                true,
-                false
-              ])
-            }
-          >
-            Xbox One
+          <div onClick={() => selectPlatformSort("xboxone")}>
+            <Link to="/topgames/xboxone" className="dropdown-selection">
+              Xbox One
+            </Link>
           </div>
-          <div
-            className="dropdown-selection"
-            onClick={() =>
-              selectPlatformSort([
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                true
-              ])
-            }
-          >
-            Nintendo Switch
+          <div onClick={() => selectPlatformSort("nintendoswitch")}>
+            <Link to="/topgames/nintendoswitch" className="dropdown-selection">
+              Nintendo Switch
+            </Link>
           </div>
         </div>
       </div>
 
-      <div
+      <Link
+        to="/store"
         className={
           display[3] === true
             ? "Navigation__item Navigation__item--active"
             : "Navigation__item"
         }
-        onClick={() => loadPage(3)}
       >
         Store
-      </div>
+      </Link>
       {cart}
     </div>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import "../../sass/main.scss";
 
@@ -37,6 +38,7 @@ import WorldofWarcraft from "../../img/covers/World_of_Warcraft.png";
 import XenobladeChronicles from "../../img/covers/Xenoblade_Chronicles.png";
 
 const Preview = ({
+  id,
   title,
   score,
   viewDetails,
@@ -161,7 +163,7 @@ const Preview = ({
     );
 
   return (
-    <div className="Preview" onClick={() => viewDetails(title)}>
+    <Link to={`/details/:${id}`} className="Preview">
       <img src={img} alt="game" className="Preview__image" />
       <div className="Preview__content">
         <div className="Preview__title">{title}</div>
@@ -178,13 +180,12 @@ const Preview = ({
         </div>
       </div>
       {scoreDisplay}
-    </div>
+    </Link>
   );
 };
 Preview.propTypes = {
   title: PropTypes.string.isRequired,
   score: PropTypes.number.isRequired,
-  viewDetails: PropTypes.func.isRequired,
   release: PropTypes.string.isRequired,
   genre: PropTypes.string.isRequired,
   platforms: PropTypes.array.isRequired,

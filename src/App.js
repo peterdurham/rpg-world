@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./sass/main.scss";
 import Header from "./components/Header/Header";
@@ -10,6 +11,7 @@ import TopGames from "./components/TopGames/TopGames";
 import Store from "./components/Store/Store";
 import Details from "./components/Details/Details";
 import Cart from "./components/Cart/Cart";
+import ScrollToTop from "./components/utils/ScrollToTop";
 
 const games = require("./data/games");
 const news = require("./data/news");
@@ -24,7 +26,7 @@ class App extends Component {
     top10: [],
     display: [true, false, false, false, false, false],
     // Sorts: All, PC, Playstation 1-4, Xbox 360/One, Nintendo Switch
-    currentSort: [true, false, false, false, false, false, false, false, false],
+    currentSort: "pc",
     selectedGame: null,
     shoppingCart: []
   };
@@ -73,76 +75,224 @@ class App extends Component {
   };
 
   render() {
-    let home =
-      this.state.display[0] === true ? (
-        <Home
-          news={this.state.news}
-          games={this.state.games}
-          top10={this.state.top10}
-          viewDetails={this.viewDetailsHandler}
-        />
-      ) : null;
-    let reviews =
-      this.state.display[1] === true ? (
-        <Reviews
-          reviews={this.state.reviews}
-          top10={this.state.top10}
-          viewDetails={this.viewDetailsHandler}
-        />
-      ) : null;
-
-    let topgames =
-      this.state.display[2] === true ? (
-        <TopGames
-          games={this.state.games}
-          currentSort={this.state.currentSort}
-          selectPlatformSort={this.selectPlatformSortHandler}
-          viewDetails={this.viewDetailsHandler}
-        />
-      ) : null;
-    let store =
-      this.state.display[3] === true ? (
-        <Store games={this.state.games} viewDetails={this.viewDetailsHandler} />
-      ) : null;
-    let details =
-      this.state.display[4] === true ? (
-        <Details
-          games={this.state.games}
-          selectedGame={this.state.selectedGame}
-          addToCart={this.addToCartHandler}
-          shoppingCart={this.state.shoppingCart}
-          loadPage={this.loadPageHandler}
-        />
-      ) : null;
-    let cart =
-      this.state.display[5] === true ? (
-        <Cart
-          games={this.state.games}
-          addToCart={this.addToCartHandler}
-          shoppingCart={this.state.shoppingCart}
-          removeFromCart={this.removeFromCartHandler}
-          loadPage={this.loadPageHandler}
-        />
-      ) : null;
-
     return (
-      <div className="App">
-        <Header loadPage={this.loadPageHandler} />
-        <Navigation
-          loadPage={this.loadPageHandler}
-          currentSort={this.state.currentSort}
-          selectPlatformSort={this.selectPlatformSortHandler}
-          shoppingCart={this.state.shoppingCart}
-          display={this.state.display}
-        />
-        {home}
-        {reviews}
-        {topgames}
-        {store}
-        {details}
-        {cart}
-        <Footer />
-      </div>
+      <Router>
+        <ScrollToTop>
+          <div className="App">
+            <Header loadPage={this.loadPageHandler} />
+            <Navigation
+              loadPage={this.loadPageHandler}
+              currentSort={this.state.currentSort}
+              selectPlatformSort={this.selectPlatformSortHandler}
+              shoppingCart={this.state.shoppingCart}
+              display={this.state.display}
+            />
+            <Switch>
+              <Route
+                exact
+                path="/"
+                render={props => (
+                  <Home
+                    {...props}
+                    news={this.state.news}
+                    games={this.state.games}
+                    top10={this.state.top10}
+                    viewDetails={this.viewDetailsHandler}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/reviews"
+                render={props => (
+                  <Reviews
+                    {...props}
+                    reviews={this.state.reviews}
+                    top10={this.state.top10}
+                    viewDetails={this.viewDetailsHandler}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/topgames"
+                render={props => (
+                  <TopGames
+                    {...props}
+                    games={this.state.games}
+                    currentSort={this.state.currentSort}
+                    selectPlatformSort={this.selectPlatformSortHandler}
+                    viewDetails={this.viewDetailsHandler}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/topgames/all"
+                render={props => (
+                  <TopGames
+                    {...props}
+                    games={this.state.games}
+                    currentSort={this.state.currentSort}
+                    selectPlatformSort={this.selectPlatformSortHandler}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/topgames/pc"
+                render={props => (
+                  <TopGames
+                    {...props}
+                    games={this.state.games}
+                    currentSort={this.state.currentSort}
+                    selectPlatformSort={this.selectPlatformSortHandler}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/topgames/playstation"
+                render={props => (
+                  <TopGames
+                    {...props}
+                    games={this.state.games}
+                    currentSort={this.state.currentSort}
+                    selectPlatformSort={this.selectPlatformSortHandler}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/topgames/playstation2"
+                render={props => (
+                  <TopGames
+                    {...props}
+                    games={this.state.games}
+                    currentSort={this.state.currentSort}
+                    selectPlatformSort={this.selectPlatformSortHandler}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/topgames/playstation3"
+                render={props => (
+                  <TopGames
+                    {...props}
+                    games={this.state.games}
+                    currentSort={this.state.currentSort}
+                    selectPlatformSort={this.selectPlatformSortHandler}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/topgames/playstation4"
+                render={props => (
+                  <TopGames
+                    {...props}
+                    games={this.state.games}
+                    currentSort={this.state.currentSort}
+                    selectPlatformSort={this.selectPlatformSortHandler}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/topgames/xbox360"
+                render={props => (
+                  <TopGames
+                    {...props}
+                    games={this.state.games}
+                    currentSort={this.state.currentSort}
+                    selectPlatformSort={this.selectPlatformSortHandler}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/topgames/xboxone"
+                render={props => (
+                  <TopGames
+                    {...props}
+                    games={this.state.games}
+                    currentSort={this.state.currentSort}
+                    selectPlatformSort={this.selectPlatformSortHandler}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/topgames/nintendoswitch"
+                render={props => (
+                  <TopGames
+                    {...props}
+                    games={this.state.games}
+                    currentSort={this.state.currentSort}
+                    selectPlatformSort={this.selectPlatformSortHandler}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/details/:id"
+                render={props => (
+                  <Details
+                    games={this.state.games}
+                    shoppingCart={this.state.shoppingCart}
+                    addToCart={this.addToCartHandler}
+                    selectedGame={"Fable II"}
+                    {...props}
+                  />
+                )}
+              />
+
+              <Route
+                exact
+                path="/store"
+                render={props => (
+                  <Store
+                    {...props}
+                    games={this.state.games}
+                    viewDetails={this.viewDetailsHandler}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/details"
+                render={props => (
+                  <Details
+                    {...props}
+                    games={this.state.games}
+                    selectedGame={this.state.selectedGame}
+                    addToCart={this.addToCartHandler}
+                    shoppingCart={this.state.shoppingCart}
+                    loadPage={this.loadPageHandler}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/cart"
+                render={props => (
+                  <Cart
+                    {...props}
+                    games={this.state.games}
+                    addToCart={this.addToCartHandler}
+                    shoppingCart={this.state.shoppingCart}
+                    removeFromCart={this.removeFromCartHandler}
+                    loadPage={this.loadPageHandler}
+                  />
+                )}
+              />
+            </Switch>
+
+            <Footer />
+          </div>
+        </ScrollToTop>
+      </Router>
     );
   }
 }

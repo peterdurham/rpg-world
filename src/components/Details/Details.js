@@ -69,13 +69,11 @@ import WorldofWarcraftFull from "../../img/fullsize/World_of_Warcraft.jpg";
 import XenobladeChronicles from "../../img/covers/Xenoblade_Chronicles.png";
 import XenobladeChroniclesFull from "../../img/fullsize/Xenoblade_Chronicles.jpg";
 
-const Details = ({
-  selectedGame,
-  games,
-  shoppingCart,
-  loadPage,
-  addToCart
-}) => {
+const Details = props => {
+  const { selectedGame, games, shoppingCart, loadPage, addToCart } = props;
+  let id = props.match.params.id.replace(/:/g, "");
+  console.log(id);
+
   let selected = games.filter(game => game.title === selectedGame)[0];
 
   let img;
@@ -235,7 +233,7 @@ const Details = ({
   return (
     <div className="Details">
       <div className="Details__container">
-        <div className="Details__title">{selected.title}</div>
+        <div className="Details__title">"{selected.title}"</div>
         <div className="Details__platforms">
           {selected.platforms.map(platform => ` ${platform}`)}
         </div>

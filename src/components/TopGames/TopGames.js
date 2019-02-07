@@ -17,17 +17,19 @@ const TopGames = ({ games, currentSort, viewDetails }) => {
   let display;
   let icon;
 
-  if (currentSort[0] === true) {
+  console.log(currentSort);
+
+  if (currentSort === "all") {
     display = sorted;
     icon = <div>All Platforms</div>;
-  } else if (currentSort[1] === true) {
+  } else if (currentSort === "pc") {
     display = sorted.filter(game => game.platforms.indexOf("PC") > -1);
     icon = (
       <div>
         <img src={PC} alt="PC" className="TopGames__platform--image" />
       </div>
     );
-  } else if (currentSort[2] === true) {
+  } else if (currentSort === "playstation") {
     display = sorted.filter(game => game.platforms.indexOf("PlayStation") > -1);
     icon = (
       <div>
@@ -38,7 +40,7 @@ const TopGames = ({ games, currentSort, viewDetails }) => {
         />
       </div>
     );
-  } else if (currentSort[3] === true) {
+  } else if (currentSort === "playstation2") {
     display = sorted.filter(
       game => game.platforms.indexOf("PlayStation 2") > -1
     );
@@ -51,7 +53,7 @@ const TopGames = ({ games, currentSort, viewDetails }) => {
         />
       </div>
     );
-  } else if (currentSort[4] === true) {
+  } else if (currentSort === "playstation3") {
     display = sorted.filter(
       game => game.platforms.indexOf("PlayStation 3") > -1
     );
@@ -64,7 +66,7 @@ const TopGames = ({ games, currentSort, viewDetails }) => {
         />
       </div>
     );
-  } else if (currentSort[5] === true) {
+  } else if (currentSort === "playstation4") {
     display = sorted.filter(
       game => game.platforms.indexOf("PlayStation 4") > -1
     );
@@ -77,7 +79,7 @@ const TopGames = ({ games, currentSort, viewDetails }) => {
         />
       </div>
     );
-  } else if (currentSort[6] === true) {
+  } else if (currentSort === "xbox360") {
     display = sorted.filter(game => game.platforms.indexOf("Xbox 360") > -1);
     icon = (
       <div>
@@ -88,7 +90,7 @@ const TopGames = ({ games, currentSort, viewDetails }) => {
         />
       </div>
     );
-  } else if (currentSort[7] === true) {
+  } else if (currentSort === "xboxone") {
     display = sorted.filter(game => game.platforms.indexOf("Xbox One") > -1);
     icon = (
       <div>
@@ -99,7 +101,7 @@ const TopGames = ({ games, currentSort, viewDetails }) => {
         />
       </div>
     );
-  } else if (currentSort[8] === true) {
+  } else if (currentSort === "nintendoswitch") {
     display = sorted.filter(
       game => game.platforms.indexOf("Nintendo Switch") > -1
     );
@@ -127,6 +129,7 @@ const TopGames = ({ games, currentSort, viewDetails }) => {
       {display.map((game, index) => (
         <Preview
           key={index}
+          id={game.id}
           title={game.title}
           release={game.release}
           developer={game.developer}
@@ -141,7 +144,6 @@ const TopGames = ({ games, currentSort, viewDetails }) => {
 };
 TopGames.propTypes = {
   games: PropTypes.array.isRequired,
-  currentSort: PropTypes.array.isRequired,
-  viewDetails: PropTypes.func.isRequired
+  currentSort: PropTypes.string.isRequired
 };
 export default TopGames;
