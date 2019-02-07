@@ -1,19 +1,18 @@
 .header {
-    background-color: #030303; 
-    width:100%;
-    height:10rem;
-    
-    &__banner {
-        padding-top:2rem;
-        color: #fff;
-        font-size: 5rem;
-        margin: 0 5%;
-        text-shadow: .4rem .4rem rgba($color-grey, .1);
-        
-        text-align: center;
-    }
-    &__cart {
-        color: white;
-    }
+  background-color: #030303;
+  width: 100%;
+  height: 10rem;
+  padding-top: 2rem;
+  &__banner {
+    padding-top: 2rem;
+    color: #fff;
+    font-size: 5rem;
+    margin: 0 5%;
+    text-shadow: 0.4rem 0.4rem rgba($color-grey, 0.1);
+    text-decoration: none;
+    text-align: center;
+  }
+  &__cart {
+    color: white;
+  }
 }
-    

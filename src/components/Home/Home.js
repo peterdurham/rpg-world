@@ -13,7 +13,7 @@ import DivinityII from "../../img/fullsize/Divinity-_Original_Sin_II.jpg";
 
 import FinalFantasyIX from "../../img/fullsize/Final_Fantasy_IX.jpg";
 
-const Home = ({ viewDetails, top10, news }) => {
+const Home = ({ top10, news }) => {
   return (
     <div>
       <div className="Gallery">
@@ -93,7 +93,6 @@ const Home = ({ viewDetails, top10, news }) => {
                   genre={game.genre}
                   platforms={game.platforms}
                   release={game.release}
-                  viewDetails={viewDetails}
                 />
               </div>
             );
@@ -104,7 +103,6 @@ const Home = ({ viewDetails, top10, news }) => {
   );
 };
 Home.propTypes = {
-  viewDetails: PropTypes.func.isRequired,
   top10: PropTypes.array.isRequired,
   news: PropTypes.array.isRequired
 };

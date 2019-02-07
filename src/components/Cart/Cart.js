@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import "../../sass/main.scss";
 
 import CartItem from "./CartItem/CartItem";
 
-const Cart = ({ games, shoppingCart, removeFromCart, loadPage }) => {
+const Cart = ({ games, shoppingCart, removeFromCart }) => {
   let prices = games
     .filter(game => shoppingCart.indexOf(game.title) > -1)
     .map(item => item.price);
@@ -29,12 +30,13 @@ const Cart = ({ games, shoppingCart, removeFromCart, loadPage }) => {
         </div>
       </div>
     ) : (
-      <div>
+      <div className="Cart__empty">
         <div className="Cart__message">Your Cart is empty</div>
         <div className="Cart__message">Visit the store to add games</div>
-        <button className="Cart__button" onClick={() => loadPage(3)}>
+        <br />
+        <Link className="Cart__button" to="/store">
           Store
-        </button>
+        </Link>
       </div>
     );
 

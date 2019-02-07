@@ -41,6 +41,7 @@
     height: 5.5rem;
     margin-left: 4rem;
     margin-right: 25rem;
+    border-radius: 2px;
   }
   &__price {
     background-color: $color-black;
@@ -48,10 +49,11 @@
     height: 4rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
+    border-radius: 2px;
   }
   &__addToCart {
     display: flex;
-
+    border-radius: 2px;
     &--view {
       height: 4rem;
       color: white;
@@ -60,6 +62,8 @@
       background: linear-gradient(to right, $color-blue-1, $color-blue-2);
       text-align: center;
       cursor: pointer;
+      text-decoration: none;
+      border-radius: 2px;
     }
     &--add {
       height: 4rem;

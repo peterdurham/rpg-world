@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import "../../sass/main.scss";
 
@@ -70,176 +71,143 @@ import XenobladeChronicles from "../../img/covers/Xenoblade_Chronicles.png";
 import XenobladeChroniclesFull from "../../img/fullsize/Xenoblade_Chronicles.jpg";
 
 const Details = props => {
-  const { games, shoppingCart, loadPage, addToCart } = props;
+  const { games, shoppingCart, addToCart } = props;
 
   let id = Number(props.match.params.id.replace(/:/g, ""));
 
   let img;
   let full;
-  let title;
+
   switch (id) {
     case 1:
-      title = "Mass Effect 2";
       img = MassEffect2;
       full = MassEffect2Full;
       break;
     case 2:
-      title = "The Elder Scrolls V: Skyrim";
       img = Skyrim;
       full = SkyrimFull;
       break;
     case 3:
-      title = "Baldur's Gate";
       img = BaldursGate;
       full = BaldursGateFull;
       break;
     case 4:
-      title = "Divinity: Original Sin II";
       img = DivinityOriginalSinII;
       full = DivinityOriginalSinIIFull;
       break;
     case 5:
-      title = "Final Fantasy IX";
       img = FinalFantasyIX;
       full = FinalFantasyIXFull;
       break;
     case 6:
-      title = "Chrono Cross";
       img = ChronoCross;
       full = ChronoCrossFull;
       break;
     case 7:
-      title = "The Elder Scrolls IV: Oblivion";
       img = Oblivion;
       full = OblivionFull;
       break;
     case 8:
-      title = "Divinity: Original Sin";
       img = DivinityOriginalSin;
       full = DivinityOriginalSinFull;
       break;
     case 9:
-      title = "Diablo";
       img = Diablo;
       full = DiabloFull;
       break;
     case 10:
-      title = "Bastion";
       img = Bastion;
       full = BastionFull;
       break;
     case 11:
-      title = "Star Wars: Knights of the Old Republic";
       img = KnightsoftheOldRepublic;
       full = KnightsoftheOldRepublicFull;
       break;
     case 12:
-      title = "The Witcher 3: Wild Hunt";
       img = TheWitcher3;
       full = TheWitcher3Full;
       break;
     case 13:
-      title = "Fallout 3";
       img = Fallout3;
       full = Fallout3Full;
       break;
     case 14:
-      title = "Mass Effect 3";
       img = MassEffect3;
       full = MassEffect3Full;
       break;
     case 15:
-      title = "World of Warcraft";
       img = WorldofWarcraft;
       full = WorldofWarcraftFull;
       break;
     case 16:
-      title = "BloodBorne";
       img = BloodBorne;
       full = BloodBorneFull;
       break;
     case 17:
-      title = "Vagrant Story";
       img = VagrantStory;
       full = VagrantStoryFull;
       break;
     case 18:
-      title = "Final Fantasy XII";
       img = FinalFantasyXII;
       full = FinalFantasyXIIFull;
       break;
     case 19:
-      title = "Final Fantasy X";
       img = FinalFantasyX;
       full = FinalFantasyXFull;
       break;
     case 20:
-      title = "Final Fantasy VII";
       img = FinalFantasyVII;
       full = FinalFantasyVIIFull;
       break;
     case 21:
-      title = "Chrono Trigger";
       img = ChronoTrigger;
       full = ChronoTriggerFull;
       break;
     case 22:
-      title = "Xenoblade Chronicles";
       img = XenobladeChronicles;
       full = XenobladeChroniclesFull;
       break;
     case 23:
-      title = "Dark Souls II";
       img = DarkSoulsII;
       full = DarkSoulsIIFull;
       break;
     case 24:
-      title = "Baldur's Gate II: Shadows_of_Amn";
       img = BaldursGateII;
       full = BaldursGateIIFull;
       break;
     case 25:
-      title = "Monster Hunter: World";
       img = MonsterHunterWorld;
       full = MonsterHunterWorldFull;
       break;
     case 26:
-      title = "Guild Wars 2";
       img = GuildWars2;
       full = GuildWars2Full;
       break;
     case 27:
-      title = "Final Fantasy VIII";
       img = FinalFantasyVIII;
       full = FinalFantasyVIIIFull;
       break;
     case 28:
-      title = "Dark Souls III";
       img = DarkSoulsIII;
       full = DarkSoulsIIIFull;
       break;
     case 29:
-      title = "Demon Souls";
       img = DemonSouls;
       full = DemonSoulsFull;
       break;
     case 30:
-      title = "Pillars of Eternity";
       img = PillarsofEternity;
       full = PillarsofEternityFull;
       break;
     case 31:
-      title = "Castlevania: Symphony of the Night";
       img = CastlevaniaSymphony;
       full = CastlevaniaSymphonyFull;
       break;
     case 32:
-      title = "The Elder Scrolls III: Morrowind";
       img = Morrowind;
       full = MorrowindFull;
       break;
     case 33:
-      title = "Fable II";
       img = FableII;
       full = FableIIFull;
       break;
@@ -255,9 +223,9 @@ const Details = props => {
   if (selected) {
     cartButton =
       shoppingCart.indexOf(selected.title) > -1 ? (
-        <div className="Details__addToCart--view" onClick={() => loadPage(5)}>
+        <Link className="Details__addToCart--view" to="/cart">
           View Cart
-        </div>
+        </Link>
       ) : (
         <div
           className="Details__addToCart--add"
@@ -272,7 +240,7 @@ const Details = props => {
     <div className="Details">
       {selected && (
         <div className="Details__container">
-          <div className="Details__title">"{selected.title}"</div>
+          <div className="Details__title">{selected.title}</div>
           <div className="Details__platforms">
             {selected.platforms.map(platform => ` ${platform}`)}
           </div>

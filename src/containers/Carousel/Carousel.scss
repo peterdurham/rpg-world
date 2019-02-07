@@ -3,6 +3,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
+  margin-bottom: 2rem;
   text-align: left;
   color: $color-grey;
   &__display {
@@ -11,9 +12,12 @@
   }
   &__slide {
     display: flex;
-    box-shadow: 0 0.4rem 0.8rem rgba(140, 140, 140, 0.6);
+    box-shadow: 0 10px 16px rgba(40, 40, 40, 0.8);
     background: linear-gradient(to left, $color-blue-1, $color-blue-2);
     cursor: pointer;
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+    z-index: 10;
   }
   &__slider--left {
     border: 1px solid black;
@@ -22,6 +26,7 @@
     font-size: 3rem;
     background: linear-gradient(to left, $color-blue-1, $color-blue-2);
     cursor: pointer;
+    box-shadow: 0 4px 8px rgba(40, 40, 40, 0.8);
   }
   &__slider--left:active {
     transform: translateY(2px);
@@ -33,23 +38,25 @@
     font-size: 3rem;
     background: linear-gradient(to right, $color-blue-1, $color-blue-2);
     cursor: pointer;
+    box-shadow: 0 4px 8px rgba(40, 40, 40, 0.8);
   }
   &__slider--right:active {
     transform: translateY(2px);
   }
   &__img {
     height: 40rem;
-    width: 56rem;
+    width: 54rem;
   }
   &__contents {
     margin-left: 1rem;
-    width: 20rem;
+    width: 22rem;
   }
   &__name {
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: 600;
     padding-top: 1rem;
     padding-left: 1rem;
+    margin-bottom: 1rem;
   }
   &__screenshots {
     display: flex;

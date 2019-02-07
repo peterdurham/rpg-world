@@ -1,57 +1,52 @@
 .Review {
-    display: flex;
-    background-color: white;
-    text-align: left;
-    margin-left:1rem;
+  display: flex;
+  background-color: white;
+  text-align: left;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  &:not(:last-child) {
+    border-bottom: 1px solid rgb(200, 200, 200);
+  }
 
-    &:not(:last-child) {
-        border-bottom: 1px solid rgb(200,200,200);
-    }
-
-    &__img {
-        width: 15rem;
-        height: 11rem;
-        padding-right: 1rem;
-        margin-bottom: 1rem;
-        margin-top: 1rem;
-    }
-    &__content {
-
-    }
-    &__title {
-        font-size: 1.6rem;
-        font-weight: 600;
-        margin-top:.5rem;
-        margin-bottom: 1rem;
-    }
-    &__link {
-        text-decoration: none;
-        color: black;
-    }
-    &__preview {
-        font-size: 1.2rem;
-    }
-    &__info {
-        font-size: 1.2rem;
-        font-style: italic;
-        margin-bottom: .5rem;
-    }
-    &__author {
-
-    }
-    &__date {
-
-    }
-    &__site {
-
-    }
-    &__logolink {
-
-    }
-    &__logo {
-        width: 10rem;
-        margin-left:1rem;
-        margin-top:1rem;
-        margin-right: 1rem;
-    }
+  &__img {
+    width: 15rem;
+    height: 11rem;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  &__content {
+  }
+  &__title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  &__link {
+    text-decoration: none;
+    color: black;
+  }
+  &__preview {
+    font-size: 1.2rem;
+  }
+  &__info {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+  &__author {
+  }
+  &__date {
+  }
+  &__site {
+  }
+  &__logolink {
+  }
+  &__logo {
+    width: 10rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+  }
 }

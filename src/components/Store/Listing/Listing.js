@@ -158,7 +158,6 @@ const Listing = ({ title, platforms, genre, price, id }) => {
 };
 Listing.propTypes = {
   title: PropTypes.string.isRequired,
-  viewDetails: PropTypes.func.isRequired,
   platforms: PropTypes.array.isRequired,
   genre: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,

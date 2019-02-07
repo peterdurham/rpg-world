@@ -7,7 +7,7 @@ import FinalFantasyIX from "../../img/fullsize/Final_Fantasy_IX.jpg";
 import Review from "./Review/Review";
 import TopPreview from "../TopPreview/TopPreview";
 
-const Reviews = ({ reviews, top10, viewDetails }) => {
+const Reviews = ({ reviews, top10 }) => {
   return (
     <div className="Reviews">
       <div className="Reviews__content">
@@ -41,7 +41,6 @@ const Reviews = ({ reviews, top10, viewDetails }) => {
             genre={game.genre}
             platforms={game.platforms}
             release={game.release}
-            viewDetails={viewDetails}
           />
         ))}
       </div>
@@ -50,7 +49,6 @@ const Reviews = ({ reviews, top10, viewDetails }) => {
 };
 Reviews.propTypes = {
   reviews: PropTypes.array.isRequired,
-  top10: PropTypes.array.isRequired,
-  viewDetails: PropTypes.func.isRequired
+  top10: PropTypes.array.isRequired
 };
 export default Reviews;

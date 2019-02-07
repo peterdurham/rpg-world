@@ -1,73 +1,54 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import "../../sass/main.scss";
 
-const Navigation = ({
-  shoppingCart,
-  loadPage,
-  display,
-  selectPlatformSort
-}) => {
+const Navigation = ({ shoppingCart, selectPlatformSort }) => {
   let cart =
     shoppingCart.length === 0 ? (
-      <Link
+      <NavLink
         to="/cart"
-        className={
-          display[5] === true
-            ? "Navigation__item Navigation__item--active"
-            : "Navigation__item"
-        }
+        className="Navigation__item"
+        activeClassName="Navigation__item--active"
       >
         Cart
-      </Link>
+      </NavLink>
     ) : (
-      <Link
+      <NavLink
         to="/cart"
-        className={
-          display[5] === true
-            ? "Navigation__item Navigation__item--active"
-            : "Navigation__item"
-        }
+        className="Navigation__item"
+        activeClassName="Navigation__item--active"
       >
         Cart {shoppingCart.length}
-      </Link>
+      </NavLink>
     );
 
   return (
     <div className="Navigation">
-      <Link
+      <NavLink
         to="/"
-        className={
-          display[0] === true
-            ? "Navigation__item Navigation__item--active"
-            : "Navigation__item"
-        }
+        exact
+        className="Navigation__item"
+        activeClassName="Navigation__item--active"
       >
         RPG World
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         to="/reviews"
-        className={
-          display[1] === true
-            ? "Navigation__item Navigation__item--active"
-            : "Navigation__item"
-        }
+        className="Navigation__item"
+        activeClassName="Navigation__item--active"
       >
         Reviews
-      </Link>
+      </NavLink>
 
       <div className="dropdown">
-        <Link
+        <NavLink
           to="/topgames/all"
-          className={
-            display[2] === true
-              ? "Navigation__item dropbtn Navigation__item--active"
-              : "Navigation__item dropbtn"
-          }
+          className="Navigation__item"
+          activeClassName="Navigation__item--active"
         >
           Top Games<span className="Navigation__icon">&#9660;</span>
-        </Link>
+        </NavLink>
         <div className="dropdown-content">
           <div onClick={() => selectPlatformSort("all")}>
             <Link to="/topgames/all" className="dropdown-selection">
@@ -117,16 +98,13 @@ const Navigation = ({
         </div>
       </div>
 
-      <Link
+      <NavLink
         to="/store"
-        className={
-          display[3] === true
-            ? "Navigation__item Navigation__item--active"
-            : "Navigation__item"
-        }
+        activeClassName="Navigation__item--active"
+        className="Navigation__item"
       >
         Store
-      </Link>
+      </NavLink>
       {cart}
     </div>
   );
@@ -134,7 +112,6 @@ const Navigation = ({
 
 Navigation.propTypes = {
   shoppingCart: PropTypes.array.isRequired,
-  display: PropTypes.array.isRequired,
   selectPlatformSort: PropTypes.func.isRequired
 };
 export default Navigation;

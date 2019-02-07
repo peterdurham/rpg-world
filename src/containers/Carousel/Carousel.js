@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+
 import { Link } from "react-router-dom";
 
 import BaldursGate from "../../img/fullsize/Baldurs_Gate.jpg";
@@ -43,7 +43,6 @@ class Carousel extends Component {
   };
 
   render() {
-    const { viewDetails } = this.props;
     let slide1 = this.state.carouselSlide === 1 && (
       <Link className="Carousel__slide" to="/details/:3">
         <img src={BaldursGate} alt="bg" className="Carousel__img" />
@@ -236,7 +235,5 @@ class Carousel extends Component {
     );
   }
 }
-Carousel.propTypes = {
-  viewDetails: PropTypes.func.isRequired
-};
+
 export default Carousel;

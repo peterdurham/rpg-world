@@ -5,27 +5,33 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
-  height: 40rem;
-
+  height: 36rem;
+  margin-bottom: 2rem;
   &__left {
     position: relative;
     margin-right: 2rem;
     cursor: pointer;
+    box-shadow: 0 6px 12px rgba(40, 40, 40, 0.8);
   }
   &__middle {
     position: relative;
     margin-right: 2rem;
     cursor: pointer;
+    box-shadow: 0 6px 12px rgba(40, 40, 40, 0.8);
   }
   &__right {
+    display: flex;
+    flex-direction: column;
     &--top {
       position: relative;
       margin-bottom: 2.3rem;
       cursor: pointer;
+      box-shadow: 0 4px 8px rgba(40, 40, 40, 0.8);
     }
     &--bottom {
       position: relative;
       cursor: pointer;
+      box-shadow: 0 4px 8px rgba(40, 40, 40, 0.8);
     }
   }
 
@@ -39,7 +45,7 @@
   &__content {
     background: linear-gradient(to right, $color-blue-1, $color-blue-2);
     position: absolute;
-    bottom: 4rem;
+    bottom: 0rem;
     left: 0;
     width: 100%;
     height: 9rem;
@@ -48,7 +54,6 @@
     padding-left: 2rem;
     display: flex;
     justify-content: space-between;
-    box-shadow: 0 0.4rem 0.8rem rgba(140, 140, 140, 0.6);
   }
   &__content--small {
     background: linear-gradient(to right, $color-blue-1, $color-blue-2);

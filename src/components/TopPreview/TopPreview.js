@@ -14,7 +14,7 @@ import KnightsoftheOldRepublic from "../../img/covers/Star_Wars-_Knights_of_the_
 import VagrantStory from "../../img/covers/Vagrant_Story.png";
 import XenobladeChronicles from "../../img/covers/Xenoblade_Chronicles.png";
 
-const TopPreview = ({ title, viewDetails, date, platforms, id }) => {
+const TopPreview = ({ title, date, platforms, id }) => {
   let img;
   switch (title) {
     case "Baldur's Gate":
@@ -64,7 +64,6 @@ const TopPreview = ({ title, viewDetails, date, platforms, id }) => {
 };
 TopPreview.propTypes = {
   title: PropTypes.string.isRequired,
-  viewDetails: PropTypes.func.isRequired,
   date: PropTypes.string,
   platform: PropTypes.array,
   id: PropTypes.number.isRequired

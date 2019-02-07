@@ -24,9 +24,8 @@ class App extends Component {
     news: [],
     reviews: [],
     top10: [],
-    display: [true, false, false, false, false, false],
-    // Sorts: All, PC, Playstation 1-4, Xbox 360/One, Nintendo Switch
-    currentSort: "pc",
+
+    currentSort: "all",
     selectedGame: null,
     shoppingCart: []
   };
@@ -40,24 +39,10 @@ class App extends Component {
     }));
   };
 
-  loadPageHandler = indexToShow => {
-    let display = [...this.state.display];
-    display = display.map(item => false);
-    display[indexToShow] = true;
-    this.setState(() => ({ display }));
-  };
-
   selectPlatformSortHandler = platformSort => {
     this.setState(() => ({
       currentSort: platformSort,
       display: [false, false, true, false]
-    }));
-  };
-
-  viewDetailsHandler = titleToView => {
-    this.setState(() => ({
-      selectedGame: titleToView,
-      display: [false, false, false, false, true]
     }));
   };
 

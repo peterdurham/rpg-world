@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
+
 import "../../../sass/main.scss";
 
 import ChronoCrossCover from "../../../img/covers/Chrono_Cross.png";
@@ -8,7 +8,7 @@ import MonsterHunterWorldCover from "../../../img/covers/Monster_Hunter_World.pn
 import DemonSouls from "../../../img/fullsize/Demon_Souls.jpg";
 import FinalFantasyX from "../../../img/fullsize/Final_Fantasy_X.jpg";
 
-const Offers = ({ viewDetails }) => {
+const Offers = () => {
   return (
     <div className="Offers">
       <Link className="Offers__left" to="/details/:6">
@@ -67,7 +67,5 @@ const Offers = ({ viewDetails }) => {
     </div>
   );
 };
-Offers.propTypes = {
-  viewDetails: PropTypes.func.isRequired
-};
+
 export default Offers;

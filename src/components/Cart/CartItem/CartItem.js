@@ -110,7 +110,6 @@ const CartItem = ({ title, game, removeFromCart }) => {
     case "Baldur's Gate II: Shadows_of_Amn":
       img = BaldursGateII;
       break;
-
     case "Monster Hunter: World":
       img = MonsterHunterWorld;
       break;

@@ -12,7 +12,7 @@ import Xbox360 from "../../img/platforms/xbox360-logo.png";
 import Xboxone from "../../img/platforms/xboxone-logo.png";
 import Nintendoswitch from "../../img/platforms/nintendoswitch-logo.png";
 
-const TopGames = ({ games, currentSort, viewDetails }) => {
+const TopGames = ({ games, currentSort }) => {
   let sorted = games.sort((a, b) => b.score - a.score);
   let display;
   let icon;
@@ -134,7 +134,6 @@ const TopGames = ({ games, currentSort, viewDetails }) => {
           genre={game.genre}
           score={game.score}
           platforms={game.platforms}
-          viewDetails={viewDetails}
         />
       ))}
     </div>
