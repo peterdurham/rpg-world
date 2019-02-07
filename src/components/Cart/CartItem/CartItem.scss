@@ -1,37 +1,37 @@
 .CartItem {
-    
-    width:100rem;
+  width: 100rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+
+  &__container {
+    width: 80rem;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom:1rem;
-    &__container {
-        width: 80rem;
-        margin-left: auto;
-        margin-right: auto;
-        display:flex;
-        justify-content: space-between;
-    }
-    &__title {
-        font-size: 2.4rem;
-        font-weight: 600;
-        padding-left:4rem;
-    }
-    &__img {
-        width:12rem;
-        height:14rem;
-    }
-    &__price {
-        font-size: 2.4rem;
-        font-weight: 500;
-    }
-    &__button {
-        padding:.5rem 1rem;
-        font-weight: 500;
-    }
-    &__left {
-        display:flex;
-    }
-    &__right {
-        
-    }
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    padding-left: 4rem;
+  }
+  &__img {
+    width: 12rem;
+    height: 14rem;
+  }
+  &__price {
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+  &__button {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  &__left {
+    display: flex;
+  }
+  &__right {
+  }
 }

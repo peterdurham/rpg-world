@@ -1,15 +1,16 @@
 .Store {
-    width:100rem;
-    margin-right:auto;
-    margin-left:auto;
-    background-color:white;
-    padding-bottom:4rem;
-    &__label {
-        font-size: 3rem;
-        font-weight: 700;
-        padding-top:2rem;
-        &--rpg {
-            margin-bottom:2rem;
-        }
+  width: 100rem;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgb(29, 29, 29);
+  padding-bottom: 4rem;
+  color: rgb(240, 240, 240);
+  &__label {
+    font-size: 3rem;
+    font-weight: 700;
+    padding-top: 2rem;
+    &--rpg {
+      margin-bottom: 2rem;
     }
+  }
 }

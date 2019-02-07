@@ -1,28 +1,28 @@
 .TopPreview {
-    display:flex;
-    text-align: left;
-    padding-top:1rem;
-    cursor: pointer;
-    
-    &__img {
-        width:10rem;
-        height:10rem;
-    }
-    &__content {
-        margin-left: 1rem;
-    }
-    
-    &__title {
-        font-size: 2rem;
-    }
-    &__date {
-        font-size: 1.2rem;
-    }
-    &__platforms {
-        font-size: 1.2rem;
-    }
+  display: flex;
+  text-align: left;
+  padding-top: 1rem;
+  cursor: pointer;
 
-    &:hover {
-        background-color: rgb(250,250,250);
-    }
+  &__img {
+    width: 10rem;
+    height: 10rem;
+  }
+  &__content {
+    margin-left: 1rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+  }
+  &__date {
+    font-size: 1.2rem;
+  }
+  &__platforms {
+    font-size: 1.2rem;
+  }
+
+  &:hover {
+    background-color: rgb(250, 250, 250);
+  }
 }

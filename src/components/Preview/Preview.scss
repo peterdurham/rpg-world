@@ -1,73 +1,68 @@
 .Preview {
-    display:flex;
-    width: 80rem;
-    margin-left:auto;
-    margin-right:auto;
-    padding: 1rem 0;
-    // border: 1px solid rgb(140,140,140);
-    box-shadow: 0 .4rem .8rem rgba(180,180,180, .6);
-    margin-bottom:1rem;
-    border-radius: 2px;
-    
+  display: flex;
+  width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 0;
+  // border: 1px solid rgb(140,140,140);
+  box-shadow: 0 0.4rem 0.8rem rgba(180, 180, 180, 0.6);
+  margin-bottom: 1rem;
+  border-radius: 2px;
+  background-color: white;
 
+  cursor: pointer;
+  &__image {
+    width: 14rem;
+    height: 16rem;
+    padding: 1rem 2rem;
+  }
+  &__content {
+    width: 65rem;
+    text-align: left;
+    margin-left: 1rem;
+    font-size: 1.8rem;
+  }
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 600;
+  }
+  &__developer {
+  }
+  &__platforms {
+  }
+  &__genre {
+  }
+  &__score {
+    width: 5rem;
+    background-color: $color-black;
+    color: white;
+    font-size: 2rem;
+    margin: 1rem 13rem 11rem 1rem;
+    border-radius: 0.5rem;
+    line-height: 4rem;
 
-    cursor: pointer;
-    &__image {
-        width:14rem;
-        height:16rem;
-        padding: 1rem 2rem;
+    &--green {
+      background-color: $color-score-green;
     }
-    &__content {
-        width:65rem;
-        text-align: left;
-        margin-left:1rem;
-        font-size: 1.8rem;
+    &--yellow {
+      background-color: $color-score-yellow;
     }
-    &__title {
-        font-size: 2.4rem;
-        font-weight: 600;
+    &--container {
+      display: flex;
     }
-    &__developer {
-        
-    }
-    &__platforms {
-        
-    }
-    &__genre {
-        
-    }
-    &__score {
-        width:5rem;
-        background-color:$color-black;
-        color: white;
-        font-size: 2rem;
-        margin: 1rem 13rem 11rem 1rem;
-        border-radius: .5rem;
-        line-height: 4rem;
+    &--label {
+      font-size: 2rem;
 
-        &--green {
-            background-color: $color-score-green;
-        }
-        &--yellow {
-            background-color: $color-score-yellow;
-        }
-        &--container {
-            display: flex;
-            
-        }
-        &--label {
-            font-size: 2rem;
-            
-            width: 12rem;
-            overflow: hidden;
-            white-space: nowrap;
-            margin-top: 1rem;
-        }
+      width: 12rem;
+      overflow: hidden;
+      white-space: nowrap;
+      margin-top: 1rem;
     }
-    &__bold {
-        font-weight: 500;
-    }
+  }
+  &__bold {
+    font-weight: 500;
+  }
 }
 .Preview:hover {
-    background-color:rgb(250,250,250);
+  background-color: rgb(250, 250, 250);
 }

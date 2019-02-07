@@ -1,96 +1,93 @@
 .Offers {
-    
-    width: 96rem;
+  width: 86rem;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  height: 40rem;
+
+  &__left {
+    position: relative;
+    margin-right: 2rem;
+    cursor: pointer;
+  }
+  &__middle {
+    position: relative;
+    margin-right: 2rem;
+    cursor: pointer;
+  }
+  &__right {
+    &--top {
+      position: relative;
+      margin-bottom: 2.3rem;
+      cursor: pointer;
+    }
+    &--bottom {
+      position: relative;
+      cursor: pointer;
+    }
+  }
+
+  &__tallimg {
+    width: 29rem;
+  }
+  &__wideimg {
+    width: 29rem;
+    height: 16.1rem;
+  }
+  &__content {
+    background: linear-gradient(to right, $color-blue-1, $color-blue-2);
+    position: absolute;
+    bottom: 4rem;
+    left: 0;
+    width: 100%;
+    height: 9rem;
+    font-size: 2.4rem;
+    text-align: left;
+    padding-left: 2rem;
     display: flex;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top:2rem;
-    height:40rem;
-
-    &__left {
-        position: relative;
-        margin-right:2rem;
-        cursor: pointer;
+    justify-content: space-between;
+    box-shadow: 0 0.4rem 0.8rem rgba(140, 140, 140, 0.6);
+  }
+  &__content--small {
+    background: linear-gradient(to right, $color-blue-1, $color-blue-2);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+    box-shadow: 0 0.4rem 0.8rem rgba(140, 140, 140, 0.6);
+  }
+  &__sale {
+    display: flex;
+    flex-direction: column;
+    height: 2rem;
+    &--title {
+      font-weight: 600;
+      font-size: 2.4rem;
+      padding-top: 0.5rem;
+      color: $color-grey;
     }
-    &__middle {
-        position: relative;
-        margin-right:2rem;
-        cursor: pointer;
+    &--label {
+      width: 6rem;
+      height: 3rem;
+      background-color: $color-score-green;
+      font-size: 1.6rem;
+      margin-top: 1rem;
+      text-align: center;
     }
-    &__right {
-
-        &--top {
-            position: relative;
-            margin-bottom:2.3rem;
-            cursor: pointer;
-        }
-        &--bottom {
-            position: relative;
-            cursor: pointer;
-        }
+    &--price {
+      width: 6rem;
+      height: 3rem;
+      background-color: $color-blue-1;
+      font-size: 1.6rem;
+      color: $color-grey;
+      text-align: center;
+      margin-right: 1rem;
     }
-
-    &__tallimg {
-        width: 32rem;
-    }
-    &__wideimg {
-        width: 32rem;
-        height:16.1rem;
-    }
-    &__content {
-        background: linear-gradient(to right, $color-blue-1, $color-blue-2);
-        position: absolute;
-        bottom: 4rem;
-        left: 0;
-        width: 100%;
-        height: 9rem;
-        font-size: 2.4rem;
-        text-align: left;
-        padding-left:2rem;
-        display:flex;
-        justify-content: space-between;
-        box-shadow: 0 .4rem .8rem rgba(140,140,140,.6);
-    }
-    &__content--small {
-        background: linear-gradient(to right, $color-blue-1, $color-blue-2);
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 7rem;
-        display:flex;
-        justify-content: space-between;
-        padding-left:2rem;
-        box-shadow: 0 .4rem .8rem rgba(140,140,140,.6);
-    }
-    &__sale {
-        display:flex;
-        flex-direction: column;
-        height:2rem;
-        &--title{
-            font-weight: 600;
-            font-size: 2.4rem;
-            padding-top:.5rem;
-            color: $color-grey;
-        }
-        &--label {
-            width:6rem;
-            height:3rem;
-            background-color:$color-score-green;
-            font-size: 1.6rem;
-            margin-top:1rem;
-            text-align: center;
-        }
-        &--price {
-            width:6rem;
-            height:3rem;
-            background-color:$color-blue-1;
-            font-size: 1.6rem;
-            color:$color-grey;
-            text-align: center;
-            margin-right:1rem;
-        }
-    }
-
+  }
 }

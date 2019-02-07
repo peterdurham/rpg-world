@@ -1,51 +1,46 @@
 .TopGames {
-    background-color: white;
-    width: 100rem;
-    margin-left: auto;
-    margin-right: auto;
-    
+  background-color: rgb(240, 240, 240);
+  width: 100rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 4rem;
+  &__header {
+    font-size: 3rem;
+    border-bottom: 3px solid $color-black;
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: center;
 
-    &__header {
-        font-size: 3rem;
-        border-bottom: 3px solid $color-black;
-        text-align: center;
-        margin-left:1rem;
-        margin-right:1rem;
-        display:flex;
-        justify-content: center;
-        
-        padding:2rem 0;
-        margin-bottom:2rem;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+  }
+  &__title {
+    margin-right: 1rem;
+    font-weight: 700;
+  }
+  &__platforms {
+    display: flex;
+    justify-content: center;
+  }
+  &__platform {
+    &--image {
+      height: 4rem;
     }
-    &__title {
-        margin-right:1rem;
-        font-weight: 700;
-    }
-    &__platforms {
-        display: flex;
-        justify-content: center;
-    }
-    &__platform {
+  }
+  &__labels {
+    display: flex;
 
-
-        &--image {
-            height:4rem;
-            
-        }
+    font-size: 2.4rem;
+    font-weight: 600;
+  }
+  &__label {
+    &--title {
+      flex-basis: 50%;
     }
-    &__labels {
-        display:flex;
-        
-        font-size: 2.4rem;
-        font-weight: 600;
+    &--user {
+      flex-basis: 50%;
     }
-    &__label {
-
-        &--title {
-            flex-basis:50%;
-         }
-        &--user {
-           flex-basis:50%;
-        }
-    }
+  }
 }
