@@ -3,7 +3,7 @@
 Demo **React** website for RPG (Role Playing Game) video games.  
 Site features include: News, Reviews, Details, Store, and Cart.
 
-![app screenshot 1](http://www.peterdurham.site/images/site-images/projects/rpg-world1.jpg)
+![app screenshot 1](http://www.peterdurham.site/images/site-images/projects/rpg-world.png)
 ![app screenshot 2](http://www.peterdurham.site/images/site-images/projects/rpg-world2.png)
 
 ## Instructions
@@ -24,4 +24,4 @@ to run the app in development mode
 This project was built using **Create-React-App**  
 This project uses **React Router** for routing  
 The styles for this project use **SCSS** using **Block Element Method**  
-This project was deployed using **Netlify**
+This project was deployed using **Netlify [here](https://cranky-lewin-725f99.netlify.com)**
