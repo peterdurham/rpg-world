@@ -24,4 +24,4 @@ to run the app in development mode
 This project was built using **Create-React-App**  
 This project uses **React Router** for routing  
 The styles for this project use **SCSS** using **Block Element Method**  
-This project was deployed using **Netlify [here](https://cranky-lewin-725f99.netlify.com)**
+This project was deployed using **Netlify [here](https://vibrant-wozniak-a5518c.netlify.com/)**
