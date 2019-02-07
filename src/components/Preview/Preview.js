@@ -41,7 +41,6 @@ const Preview = ({
   id,
   title,
   score,
-  viewDetails,
   release,
   genre,
   platforms,

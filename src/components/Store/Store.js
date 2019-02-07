@@ -17,6 +17,7 @@ const Store = ({ games, viewDetails }) => {
       {games.map(game => (
         <Listing
           key={game.title}
+          id={game.id}
           title={game.title}
           platforms={game.platforms}
           genre={game.genre}

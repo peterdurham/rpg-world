@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import "../../../sass/main.scss";
 
@@ -36,8 +37,9 @@ import VagrantStory from "../../../img/covers/Vagrant_Story.png";
 import WorldofWarcraft from "../../../img/covers/World_of_Warcraft.png";
 import XenobladeChronicles from "../../../img/covers/Xenoblade_Chronicles.png";
 
-const Listing = ({ title, viewDetails, platforms, genre, price }) => {
+const Listing = ({ title, platforms, genre, price, id }) => {
   let img;
+
   switch (title) {
     case "Mass Effect 2":
       img = MassEffect2;
@@ -143,7 +145,7 @@ const Listing = ({ title, viewDetails, platforms, genre, price }) => {
       break;
   }
   return (
-    <div className="Listing" onClick={() => viewDetails(title)}>
+    <Link className="Listing" to={`/details/:${id}`}>
       <img src={img} alt="cover" className="Listing__img" />
       <div className="Listing__content">
         <div className="Listing__title">{title}</div>
@@ -151,7 +153,7 @@ const Listing = ({ title, viewDetails, platforms, genre, price }) => {
         <div className="Listing__genre">{genre}</div>
       </div>
       <div className="Listing__price">{price}</div>
-    </div>
+    </Link>
   );
 };
 Listing.propTypes = {
@@ -159,6 +161,7 @@ Listing.propTypes = {
   viewDetails: PropTypes.func.isRequired,
   platforms: PropTypes.array.isRequired,
   genre: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired
+  price: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired
 };
 export default Listing;

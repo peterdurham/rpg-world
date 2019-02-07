@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import "../../../sass/main.scss";
 
@@ -10,7 +11,7 @@ import FinalFantasyX from "../../../img/fullsize/Final_Fantasy_X.jpg";
 const Offers = ({ viewDetails }) => {
   return (
     <div className="Offers">
-      <div className="Offers__left" onClick={() => viewDetails("Chrono Cross")}>
+      <Link className="Offers__left" to="/details/:6">
         <img
           src={ChronoCrossCover}
           alt="chrono cross"
@@ -24,11 +25,8 @@ const Offers = ({ viewDetails }) => {
             <div className="Offers__sale--price">$4.99</div>
           </div>
         </div>
-      </div>
-      <div
-        className="Offers__middle"
-        onClick={() => viewDetails("Monster Hunter: World")}
-      >
+      </Link>
+      <Link className="Offers__middle" to="/details/:25">
         <img
           src={MonsterHunterWorldCover}
           alt="bastion"
@@ -41,12 +39,9 @@ const Offers = ({ viewDetails }) => {
             <div className="Offers__sale--price">$4.99</div>
           </div>
         </div>
-      </div>
+      </Link>
       <div className="Offers__right">
-        <div
-          className="Offers__right--top"
-          onClick={() => viewDetails("Demon Souls")}
-        >
+        <Link className="Offers__right--top" to="/details/:29">
           <img src={DemonSouls} alt="demon souls" className="Offers__wideimg" />
 
           <div className="Offers__content--small">
@@ -56,11 +51,8 @@ const Offers = ({ viewDetails }) => {
               <div className="Offers__sale--price">$4.99</div>
             </div>
           </div>
-        </div>
-        <div
-          className="Offers__right--bottom"
-          onClick={() => viewDetails("Final Fantasy X")}
-        >
+        </Link>
+        <Link className="Offers__right--bottom" to="/details/:19">
           <img src={FinalFantasyX} alt="ffx" className="Offers__wideimg" />
 
           <div className="Offers__content--small">
@@ -70,7 +62,7 @@ const Offers = ({ viewDetails }) => {
               <div className="Offers__sale--price">$4.99</div>
             </div>
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   );

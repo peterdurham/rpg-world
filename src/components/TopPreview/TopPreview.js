@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import "../../sass/main.scss";
 
@@ -13,7 +14,7 @@ import KnightsoftheOldRepublic from "../../img/covers/Star_Wars-_Knights_of_the_
 import VagrantStory from "../../img/covers/Vagrant_Story.png";
 import XenobladeChronicles from "../../img/covers/Xenoblade_Chronicles.png";
 
-const TopPreview = ({ title, viewDetails, date, platforms }) => {
+const TopPreview = ({ title, viewDetails, date, platforms, id }) => {
   let img;
   switch (title) {
     case "Baldur's Gate":
@@ -51,21 +52,22 @@ const TopPreview = ({ title, viewDetails, date, platforms }) => {
   }
 
   return (
-    <div className="TopPreview" onClick={() => viewDetails(title)}>
+    <Link className="TopPreview" to={`/details/:${id}`}>
       <img src={img} alt="preview" className="TopPreview__img" />
       <div className="TopPreview__content">
         <div className="TopPreview__title">{title}</div>
         <div className="TopPreview__date">Release Date: {date}</div>
         <div className="TopPreview__platforms">Platforms: {platforms}</div>
       </div>
-    </div>
+    </Link>
   );
 };
 TopPreview.propTypes = {
   title: PropTypes.string.isRequired,
   viewDetails: PropTypes.func.isRequired,
   date: PropTypes.string,
-  platform: PropTypes.array
+  platform: PropTypes.array,
+  id: PropTypes.number.isRequired
 };
 
 export default TopPreview;

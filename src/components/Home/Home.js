@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import "../../sass/main.scss";
 import NewsLink from "../News/NewsLink/NewsLink";
@@ -17,51 +18,36 @@ const Home = ({ viewDetails, top10, news }) => {
     <div>
       <div className="Gallery">
         <div className="Gallery__toprow">
-          <div
-            className="Gallery__topleft"
-            onClick={() => viewDetails("Castlevania: Symphony of the Night")}
-          >
+          <Link className="Gallery__topleft" to="/details/:31">
             <img src={Castlevania} alt="Castlevania" className="Gallery__top" />
             <div className="Gallery__label">
               Castlevania: Symphony of the Night
             </div>
-          </div>
+          </Link>
 
-          <div
-            className="Gallery__topright"
-            onClick={() => viewDetails("Dark Souls III")}
-          >
+          <Link className="Gallery__topright" to="/details/:28">
             <img
               src={DarkSoulsIII}
               alt="Dark Souls III"
               className="Gallery__top"
             />
             <div className="Gallery__label">Dark Souls III</div>
-          </div>
+          </Link>
         </div>
         <div className="Gallery__bottomrow">
-          <div
-            className="Gallery__bottomleft"
-            onClick={() => viewDetails("Fable II")}
-          >
+          <Link className="Gallery__bottomleft" to="/details/:33">
             <img src={FableII} alt="Fable II" className="Gallery__bottom" />
             <div className="Gallery__label--small">Fable II</div>
-          </div>
-          <div
-            className="Gallery__bottommiddle"
-            onClick={() => viewDetails("Monster Hunter: World")}
-          >
+          </Link>
+          <Link className="Gallery__bottommiddle" to="/details/:25">
             <img
               src={MonsterHunter}
               alt="Monster Hunter"
               className="Gallery__bottom"
             />
             <div className="Gallery__label--small">Monster Hunter: World</div>
-          </div>
-          <div
-            className="Gallery__bottomright"
-            onClick={() => viewDetails("Divinity: Original Sin II")}
-          >
+          </Link>
+          <Link className="Gallery__bottomright" to="/details/:4">
             <img
               src={DivinityII}
               alt="Divinity II"
@@ -70,7 +56,7 @@ const Home = ({ viewDetails, top10, news }) => {
             <div className="Gallery__label--small">
               Divinity: Original Sin II
             </div>
-          </div>
+          </Link>
         </div>
       </div>
 

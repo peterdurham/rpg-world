@@ -242,7 +242,6 @@ class App extends Component {
                     games={this.state.games}
                     shoppingCart={this.state.shoppingCart}
                     addToCart={this.addToCartHandler}
-                    selectedGame={"Fable II"}
                     {...props}
                   />
                 )}

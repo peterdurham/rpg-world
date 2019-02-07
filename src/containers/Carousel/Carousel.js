@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 import BaldursGate from "../../img/fullsize/Baldurs_Gate.jpg";
 import BaldursGateScreen1 from "../../img/screenshots/BaldursGate_1.jpg";
@@ -44,10 +45,7 @@ class Carousel extends Component {
   render() {
     const { viewDetails } = this.props;
     let slide1 = this.state.carouselSlide === 1 && (
-      <div
-        className="Carousel__slide"
-        onClick={() => viewDetails("Baldur's Gate")}
-      >
+      <Link className="Carousel__slide" to="/details/:3">
         <img src={BaldursGate} alt="bg" className="Carousel__img" />
         <div className="Carousel__contents">
           <div className="Carousel__name">Baldur's Gate</div>
@@ -70,14 +68,11 @@ class Carousel extends Component {
             <div className="Carousel__platform">PC</div>
           </div>
         </div>
-      </div>
+      </Link>
     );
 
     let slide2 = this.state.carouselSlide === 2 && (
-      <div
-        className="Carousel__slide"
-        onClick={() => viewDetails("BloodBorne")}
-      >
+      <Link className="Carousel__slide" to="details/:16">
         <img src={Bloodborne} alt="bg" className="Carousel__img" />
         <div className="Carousel__contents">
           <div className="Carousel__name">Bloodborne</div>
@@ -100,14 +95,11 @@ class Carousel extends Component {
             <div className="Carousel__platform">PS4</div>
           </div>
         </div>
-      </div>
+      </Link>
     );
 
     let slide3 = this.state.carouselSlide === 3 && (
-      <div
-        className="Carousel__slide"
-        onClick={() => viewDetails("Chrono Trigger")}
-      >
+      <Link className="Carousel__slide" to="details/:21">
         <img src={ChronoTrigger} alt="bg" className="Carousel__img" />
         <div className="Carousel__contents">
           <div className="Carousel__name">Chrono Trigger</div>
@@ -130,14 +122,11 @@ class Carousel extends Component {
             <div className="Carousel__platform">SNES / PS</div>
           </div>
         </div>
-      </div>
+      </Link>
     );
 
     let slide4 = this.state.carouselSlide === 4 && (
-      <div
-        className="Carousel__slide"
-        onClick={() => viewDetails("Pillars of Eternity")}
-      >
+      <Link className="Carousel__slide" to="/details/:30">
         <img src={PillarsofEternity} alt="bg" className="Carousel__img" />
         <div className="Carousel__contents">
           <div className="Carousel__name">Pillars of Eternity</div>
@@ -160,14 +149,11 @@ class Carousel extends Component {
             <div className="Carousel__platform">PC</div>
           </div>
         </div>
-      </div>
+      </Link>
     );
 
     let slide5 = this.state.carouselSlide === 5 && (
-      <div
-        className="Carousel__slide"
-        onClick={() => viewDetails("Xenoblade Chronicles")}
-      >
+      <Link className="Carousel__slide" to="/details/:22">
         <img src={XenobladeChronicles} alt="bg" className="Carousel__img" />
         <div className="Carousel__contents">
           <div className="Carousel__name">Xenoblade Chronicles</div>
@@ -190,7 +176,7 @@ class Carousel extends Component {
             <div className="Carousel__platform">Wii</div>
           </div>
         </div>
-      </div>
+      </Link>
     );
 
     return (

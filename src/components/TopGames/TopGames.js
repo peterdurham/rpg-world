@@ -17,8 +17,6 @@ const TopGames = ({ games, currentSort, viewDetails }) => {
   let display;
   let icon;
 
-  console.log(currentSort);
-
   if (currentSort === "all") {
     display = sorted;
     icon = <div>All Platforms</div>;
