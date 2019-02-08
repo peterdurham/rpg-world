@@ -25,4 +25,4 @@ This project:
 * was built using **Create-React-App**    
 * uses **React Router** for routing  
 * is styled with **SCSS** using **Block Element Method**  
-* is deployed to **Netlify [here](https://vibrant-wozniak-a5518c.netlify.com/)**  
+* is hosted by **Netlify [here](https://vibrant-wozniak-a5518c.netlify.com/)**  
